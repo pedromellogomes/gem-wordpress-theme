@@ -37,13 +37,12 @@
 
                 <a href="#" class="button header__cta hide-for-mobile">Assine a newsletter</a>
             </nav>
-            <div class="header__menu has-fade">
-                <a href="/">Home</a>
-                <a href="#apresentacao">Apresentanção</a>
-                <a href="#subgrupos">Subgrupos</a>
-                <a href="#equipe">Equipe</a>
-                <a href="#publicacoes">Publicações</a>
-                <a href="#faleconosco">Fale conosco</a>
+            <div id="mobile_link" class="header__menu has-fade">
+                <a href="#apresentacao" class="mobile_link">Apresentanção</a>
+                <a href="#subgrupos" class="mobile_link">Subgrupos</a>
+                <a href="#equipe" class="mobile_link">Equipe</a>
+                <a href="#publicacoes" class="mobile_link">Publicações</a>
+                <a href="#faleconosco" class="mobile_link">Fale conosco</a>
             </div>
         </header>
 
@@ -164,7 +163,7 @@
             </div>
         </section>
 
-        <section class="flex flex-wrap justify-center content-center p-6 pt-20 pb-20">
+        <section id="equipe" class="flex flex-wrap justify-center content-center p-6 pt-20 pb-20">
             <div class="text-center w-3/4">
                 <h2>Equipe</h2>
                 <p class="text-justify p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur maxime quia omnis voluptas expedita eos error ut, optio consectetur, unde quaerat, doloribus ullam. Fugit iure nobis, officia sit delectus tempore.</p>
