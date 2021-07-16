@@ -172,7 +172,6 @@ button:hover::before, .button:hover::before {
 
 .header nav {
     position: relative;
-    background-color: white;
     padding-top: 1.0625rem;
     padding-bottom: 1.0625rem;
 }
@@ -220,6 +219,7 @@ button:hover::before, .button:hover::before {
     position: relative;
     font-size: 0.875rem;
     color: #9698a6;
+    font-weight: bold;
     -webkit-transition: color 300ms ease-in-out;
     transition: color 300ms ease-in-out;
 }
