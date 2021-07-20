@@ -12,10 +12,10 @@
     </head>
 
     <body <?php body_class(); ?>>
-        <header class="header bg-gray-900">
+        <header class="header">
             <div class="overlay has-fade"></div>
 
-            <nav class="flex justify-between p-6 content-center">
+            <nav class="flex justify-between p-6 items-center">
                 <a href="/" class="">
                     <img src="<?php echo get_template_directory_uri() ?>/assets/img/GEMhorizontal.png" alt="GEM" class="w-40 h-auto" />
                 </a>
@@ -35,7 +35,14 @@
                     <a href="/">Fale conosco</a>
                 </div>
 
-                <a href="#" class="button header__cta hide-for-mobile">Assine a newsletter</a>
+                <a href="#" class="flex flex-wrap items-center justify-around buttonAssine hide-for-mobile divide-x-2 divide-solid">
+                    <div class="mr-6">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/image.svg" hight="20px" width="20px" />
+                    </div>
+                    <div class="pl-2">
+                        ASSINE
+                    </div>
+                </a>
             </nav>
             <div id="mobile_link" class="header__menu has-fade">
                 <a href="#apresentacao" class="mobile_link">Apresentanção</a>

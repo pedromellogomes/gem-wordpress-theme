@@ -96,37 +96,16 @@ h1 {
     }
 }
 
-button, .button {
+button, .buttonAssine {
     position: relative;
-    display: inline-block;
     padding: 0.875rem 2.1875rem;
-    background-color: #2bb7da;
+    background-color: #005578;
     border: 0;
     border-radius: 10px;
     cursor: pointer;
     color: white;
     font-weight: 400;
     font-size: 0.875rem;
-    -webkit-transition: opacity 300ms ease-in-out;
-    transition: opacity 300ms ease-in-out;
-    overflow: hidden;
-}
-
-button::before, .button::before {
-    content: "";
-    position: absolute;
-    top: 0;
-    right: 0;
-    bottom: 0;
-    left: 0;
-    background-color: rgba(0, 0, 0, 0.10);
-    opacity: 0;
-    -webkit-transition: opacity 150ms ease-in-out;
-    transition: opacity 150ms ease-in-out;
-}
-
-button:hover::before, .button:hover::before {
-    opacity: 1;
 }
 
 @media (max-width: 63.9375em) {
@@ -143,6 +122,8 @@ button:hover::before, .button:hover::before {
 
 .header {
     z-index: 1;
+    font-family: Verdana;
+    background-color: #2a2a2a;
 }
 
 .header.open .header__toggle > span:first-child {
@@ -185,7 +166,7 @@ button:hover::before, .button:hover::before {
     display: block;
     width: 26px;
     height: 2px;
-    background-color: #2d314d;
+    background-color: white;
     -webkit-transition: all 300ms ease-in-out;
     transition: all 300ms ease-in-out;
     -webkit-transform-origin: 3px 1px;
@@ -218,7 +199,7 @@ button:hover::before, .button:hover::before {
 .header__links a {
     position: relative;
     font-size: 0.875rem;
-    color: #9698a6;
+    color: #3a8282;
     font-weight: bold;
     -webkit-transition: color 300ms ease-in-out;
     transition: color 300ms ease-in-out;
@@ -236,14 +217,10 @@ button:hover::before, .button:hover::before {
     left: 0;
     right: 0;
     bottom: -20px;
-    background-color: #2bb7da;
+    background-color: #0b4a64;
     opacity: 0;
     -webkit-transition: opacity 300ms ease-in-out;
     transition: opacity 300ms ease-in-out;
-}
-
-.header__links a:hover {
-    color: #2d314d;
 }
 
 .header__links a:hover::before {
