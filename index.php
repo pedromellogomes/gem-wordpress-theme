@@ -1,127 +1,49 @@
 <?php get_header(); ?>
 
-<section id="apresentacao" class="h-1/2 grid grid-cols-1 md:grid-cols-2 gap-4 p-12 md:pl-60 md:pr-60">
-    <div class="text-center md:text-right space-y-3">
-        <h1 class="md:text-right">Quem somos</h1>
-        <p class="text-justify md:text-right">Lorem ipsum dolor sit amet consectetur adipisicing elit. Sequi sunt, voluptatum aliquam saepe maiores repellat? Veniam officia veritatis mollitia assumenda eveniet repudiandae distinctio. Unde quasi ipsa dolorum iste veritatis nulla? lorem Lorem ipsum dolor sit amet, consectetur adipisicing elit. Veritatis provident inventore quaerat, minima vitae id, quas odio impedit animi, suscipit ut nulla praesentium tenetur labore quam natus cumque numquam tempora!</p>
-        <div class="md:text-right">
-            <a href="#" class="text-white bg-blue-500 hover:bg-blue-600 p-2 rounded shadow">Saiba mais</a>
-        </div>
-    </div>
-    <div class="hidden md:block">
-        <img src="<?php echo get_template_directory_uri() ?>/assets/img/carousel/carousel2.jpg" alt="GEM" width="470px" />
-    </div>
-</section>
-
-<section id="newsletter" class="flex flex-wrap flex-col content-center justify-center text-center p-6 pt-20 pb-20 bg-gray-100">
-    <div class="md:w-1/2">
-        <h1>Newsletter</h1>
-        <h3 class="font-light italic text-sm md:text-base">Fiquei por dentro. Assine nossa newsletter e receba tudo no seu email.</h3>
-
-        <form action="" method="post" class="flex flex-col place-items-center m-auto space-y-2 w-4/6">
-            <input type="text" name="name" id="name" placeholder="Nome" class="border-2 border-blue-500 border-opacity-25 focus:border-opacity-80 rounded p-1 w-9/12" />
-            <input type="email" name="email" id="email" placeholder="E-mail" class="border-2 border-blue-500 border-opacity-25 focus:border-opacity-80 rounded p-1 w-9/12" />
-            <div>
-                <input type="checkbox" name="newsletter" id="newsletter" />
-                <label for="newsletter" class="text-sm md:text-base">Desejo receber a newsletter</label>
-            </div>
-            <div>
-                <input type="checkbox" name="policybrief" id="policybrief" />
-                <label for="policybrief" class="text-sm md:text-base">Desejo receber o policy brief</label>
-            </div>
-            <input type="submit" value="Assinar" class="w-24 h-10 rounded bg-blue-500 hover:bg-blue-600 text-white" />
-        </form>
-    </div>
-</section>
-
-<section id="subgrupos" class="grid grid-cols-2 md:grid-cols-6 gap-4 p-6 pt-20 pb-20 text-center justify-items-center md:pr-32 md:pl-32">
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <a href="">Defesa e Segurança</a>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <a href="">Energia</a>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <a href="">Pesca e Aquicultura</a>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <a href="">Recursos Minerais</a>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <div class="">
-            <a href="">Conceitos e Metodologia</a>
-        </div>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <a href="">Transporte e Infraestrutura</a>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <a href="">Construção e Reparo</a>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <a href="">Turismo, Esporte e Lazer</a>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <a href="">Clima e Meio Ambiente</a>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <div class="">
-            <a href="">Relações Geopolíticas</a>
-        </div>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <a href="">Blue Finance</a>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <a href="">Relações Sociais</a>
-    </div>
-</section>
-
-<section id="publicacoes" class="flex flex-col justify-center text-center p-6 pt-20 pb-20 md:pl-72 md:pr-72 bg-gray-100">
-    <div class="p-6 text-center">
-        <h2>Publicações</h2>
-    </div>
-    <div class="flex flex-col md:flex-row justify-between">
-        <?php $recent_posts = wp_get_recent_posts( array(
-            'numberposts' => 4,
-            'posts-status' => 'publish'
-        ));
-        foreach( $recent_posts as $key=>$post_item ) : ?>
-            <div class="p-4 <?php if($key == 3) echo "hidden xl:block" ?>">
-                <div>
-                    thumbnail
+<section id="carrossel">
+    <div class="container-fluid">
+        <div id="MainSlider" class="carousel slide" data-ride="carousel" style="height: 300px">
+            <ol class="carousel-indicators">
+                <li data-target="MainSlider" data-slide-to="0" class="active"></li>
+                <li data-target="MainSlider" data-slide-to="1"></li>
+                <li data-target="MainSlider" data-slide-to="2"></li>
+                <li data-target="MainSlider" data-slide-to="3"></li>
+                <li data-target="MainSlider" data-slide-to="4"></li>
+            </ol>
+            <div class="carousel-inner">
+                <div class="carousel-item active">
+                    <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/assets/img/carousel/carousel1.jpg" alt="Primeiro slide">
                 </div>
-                <div>
-                    <h3><?php echo $post_item['post_title'] ?></h3>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/assets/img/carousel/carousel2.jpg" alt="Segundo slide">
                 </div>
-                <p class="italic extralight m-2 p-2">
-                    <?php echo $post_item['post_excerpt'] ?>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/assets/img/carousel/carousel3.jpg" alt="Terceiro slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/assets/img/carousel/carousel4.jpg" alt="Quarto slide">
+                </div>
+                <div class="carousel-item">
+                    <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/assets/img/carousel/carousel5.jpg" alt="Quinto slide">
+                </div>
+            </div>
+        </div>
+    </div>
+</section>
+
+<section id="apresentacao">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm text-center">
+                <h3>O que é o GEM?</h3>
+                <p class="text-justify">Criado em 2019, o Grupo Economia do Mar (GEM) é o único grupo de pesquisa do Brasil na área de Economia do Mar e Economia Azul, cadastrado no Diretório de Grupos de Pesquisa (DGP) do Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq).
                 </p>
-                <a href="<?php echo get_permalink($post_item['ID']) ?>" class="text-white bg-blue-500 hover:bg-blue-600 p-2 rounded shadow">
-                    Saiba mais
-                </a>
+                <button type="button" class="btn btn-primary"SAIBA MAIS></button>
             </div>
-        <?php endforeach; ?>
-    </div>
-</section>
-
-<section id="equipe" class="flex flex-wrap justify-center content-center p-6 pt-20 pb-20">
-    <div class="text-center w-3/4">
-        <h2>Equipe</h2>
-        <p class="text-justify p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur maxime quia omnis voluptas expedita eos error ut, optio consectetur, unde quaerat, doloribus ullam. Fugit iure nobis, officia sit delectus tempore.</p>
-        <a href="" class="bg-blue-500 text-white hover:bg-blue-600 p-2 rounded shadow">Saiba mais</a>
+            <div class="col-sm">
+                <h4>Agora você vai aprender ainda mais sobre a economia do mar</h4>
+            </div>
+        </div>
     </div>
 </section>
 
