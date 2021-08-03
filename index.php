@@ -45,99 +45,23 @@
                 <input type="checkbox" name="policybrief" id="policybrief" />
                 <label for="policybrief" class="text-sm md:text-base">Desejo receber o policy brief</label>
             </div>
-            <input type="submit" value="Assinar" class="w-24 h-10 rounded bg-blue-500 hover:bg-blue-600 text-white" />
-        </form>
+        </div>
     </div>
 </section>
 
-<section id="subgrupos" class="grid grid-cols-2 md:grid-cols-6 gap-4 p-6 pt-20 pb-20 text-center justify-items-center md:pr-32 md:pl-32">
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <a href="">Defesa e Segurança</a>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <a href="">Energia</a>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <a href="">Pesca e Aquicultura</a>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <a href="">Recursos Minerais</a>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <div class="">
-            <a href="">Conceitos e Metodologia</a>
-        </div>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <a href="">Transporte e Infraestrutura</a>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <a href="">Construção e Reparo</a>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <a href="">Turismo, Esporte e Lazer</a>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <a href="">Clima e Meio Ambiente</a>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <div class="">
-            <a href="">Relações Geopolíticas</a>
-        </div>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <a href="">Blue Finance</a>
-    </div>
-    <div class="flex flex-col items-center">
-        <div class="bg-blue-600 shadow rounded-full w-28 h-28 m-2"></div>
-        <a href="">Relações Sociais</a>
-    </div>
-</section>
-
-<section id="publicacoes" class="flex flex-col justify-center text-center p-6 pt-20 pb-20 md:pl-72 md:pr-72 bg-gray-100">
-    <div class="p-6 text-center">
-        <h2>Publicações</h2>
-    </div>
-    <div class="flex flex-col md:flex-row justify-between">
-        <?php $recent_posts = wp_get_recent_posts( array(
-            'numberposts' => 4,
-            'posts-status' => 'publish'
-        ));
-        foreach( $recent_posts as $key=>$post_item ) : ?>
-            <div class="p-4 <?php if($key == 3) echo "hidden xl:block" ?>">
-                <div>
-                    thumbnail
-                </div>
-                <div>
-                    <h3><?php echo $post_item['post_title'] ?></h3>
-                </div>
-                <p class="italic extralight m-2 p-2">
-                    <?php echo $post_item['post_excerpt'] ?>
+<section id="apresentacao">
+    <div class="container">
+        <div class="row">
+            <div class="col-sm text-center">
+                <h3>O que é o GEM?</h3>
+                <p class="text-justify">Criado em 2019, o Grupo Economia do Mar (GEM) é o único grupo de pesquisa do Brasil na área de Economia do Mar e Economia Azul, cadastrado no Diretório de Grupos de Pesquisa (DGP) do Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq).
                 </p>
-                <a href="<?php echo get_permalink($post_item['ID']) ?>" class="text-white bg-blue-500 hover:bg-blue-600 p-2 rounded shadow">
-                    Saiba mais
-                </a>
+                <button type="button" class="btn btn-primary"SAIBA MAIS></button>
             </div>
-        <?php endforeach; ?>
-    </div>
-</section>
-
-<section id="equipe" class="flex flex-wrap justify-center content-center p-6 pt-20 pb-20">
-    <div class="text-center w-3/4">
-        <h2>Equipe</h2>
-        <p class="text-justify p-2">Lorem ipsum dolor sit amet consectetur adipisicing elit. Pariatur maxime quia omnis voluptas expedita eos error ut, optio consectetur, unde quaerat, doloribus ullam. Fugit iure nobis, officia sit delectus tempore.</p>
-        <a href="" class="bg-blue-500 text-white hover:bg-blue-600 p-2 rounded shadow">Saiba mais</a>
+            <div class="col-sm">
+                <h4>Agora você vai aprender ainda mais sobre a economia do mar</h4>
+            </div>
+        </div>
     </div>
 </section>
 

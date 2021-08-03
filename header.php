@@ -28,7 +28,7 @@
 
                 <div class="header__links hide-for-mobile">
                     <a href="/">Home</a>
-                    <a href="<?php echo get_template_directory_uri() ?>/pages/apresentacao.php">Apresentanção</a>
+                    <a href="<?php echo get_template_directory_uri() ?>/pages/apresentacao.php">Apresentação</a>
                     <a href="<?php echo get_template_directory_uri() ?>/pages/subgrupos.php">Subgrupos</a>
                     <a href="<?php echo get_template_directory_uri() ?>/pages/equipe.php">Equipe</a>
                     <a href="/archive.php">Publicações</a>
