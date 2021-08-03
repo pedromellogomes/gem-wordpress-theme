@@ -1,13 +1,14 @@
 @import 'header.css';
 @import 'footer.css';
 
-body {
+.bodyContainer {
   margin: 0;
   scroll-behavior: smooth;
   padding: 0;
   font-family: 'Public Sans', sans-serif;
-  color: #9698a6;
+  /* color: #9698a6; */
   overflow-x: hidden;
+  background-color: #cecece;
 }
 
 a {
@@ -28,4 +29,22 @@ a:hover {
 
 #MainSlider .carousel-inner, #MainSlider .carousel-item{
   height: 300px;
+}
+.borderleft{
+  border-left: solid;
+  border-color: #a0baee;
+}
+
+.textrow2{
+  color: #316882;
+    text-align: center;
+    font-weight: bold;
+}
+.subgrupo{
+  text-align: center;
+  font-family: arial;
+  color: #fff;
+}
+.subgrupocontainer{
+  background-color: #02134b;
 }

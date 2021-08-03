@@ -11,7 +11,7 @@
         <?php wp_head(); ?>
     </head>
 
-    <body <?php body_class(); ?>>
+    <body <?php body_class('bodyContainer'); ?>>
         <header class="header">
             <div class="overlay has-fade"></div>
 
