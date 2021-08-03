@@ -1,5 +1,21 @@
 <?php get_header(); ?>
 
+<section class="">
+    <div id="carousel" class="carousel slide">
+        <div class="carousel-inner">
+            <div class="carousel-item active">
+                <img class="d-block w-100" src="<?php echo get_template_directory_uri() ?>/assets/img/carousel/carousel1.jpg" alt="First slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="<?php echo get_template_directory_uri() ?>/assets/img/carousel/carousel2.jpg" alt="Second slide">
+            </div>
+            <div class="carousel-item">
+                <img class="d-block w-100" src="<?php echo get_template_directory_uri() ?>/assets/img/carousel/carousel3.jpg" alt="Third slide">
+            </div>
+        </div>
+    </div>
+</section>
+
 <section id="apresentacao" class="h-1/2 grid grid-cols-1 md:grid-cols-2 gap-4 p-12 md:pl-60 md:pr-60">
     <div class="text-center md:text-right space-y-3">
         <h1 class="md:text-right">Quem somos</h1>

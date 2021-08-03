@@ -26,3 +26,6 @@ function openCloseMobileMenu() {
     });
   }
 }
+
+// CAROUSEL SCRIPT 
+$('.carousel').carousel();
