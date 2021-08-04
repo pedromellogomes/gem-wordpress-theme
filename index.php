@@ -2,7 +2,7 @@
 
 <section class="">
     <div id="carousel" class="carousel slide">
-        <div class="carousel-inner">
+        <div class="carousel-inner" style="width: 100%; height: 400px">
             <ol class="carousel-indicators">
                 <li data-target="carousel" data-slide-to="0" class="active"></li>
                 <li data-target="carousel" data-slide-to="1"></li>

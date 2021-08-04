@@ -1,10 +1,6 @@
 /* Carrossel */
 .carousel-indicators li {
-    width: 10px;
-    height: 10px ;
-    border-radius: 50%;
-  }
-  
-  .carousel-inner, .carousel-item{
-    height: 400px;
-  }
+  width: 10px;
+  height: 10px ;
+  border-radius: 50%;
+}
