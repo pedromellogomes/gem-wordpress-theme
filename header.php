@@ -26,13 +26,15 @@
                     <span></span>
                 </a>
 
-                <div class="header__links hide-for-mobile">
-                    <a href="/">Home</a>
-                    <a href="<?php echo get_template_directory_uri() ?>/pages/apresentacao.php">Apresentação</a>
-                    <a href="<?php echo get_template_directory_uri() ?>/pages/subgrupos.php">Subgrupos</a>
-                    <a href="<?php echo get_template_directory_uri() ?>/pages/equipe.php">Equipe</a>
-                    <a href="/archive.php">Publicações</a>
-                    <a href="/">Fale conosco</a>
+                <div class="hide-for-mobile">
+                    <?php
+                        wp_nav_menu(
+                            array(
+                                'theme_location' => 'desktop-navbar',
+                                'menu_class' => 'desktop-menu'
+                            )
+                        );
+                    ?>
                 </div>
 
                 <a href="#" class="flex flex-wrap items-center justify-around buttonAssine hide-for-mobile divide-x-2 divide-solid">
@@ -45,10 +47,13 @@
                 </a>
             </nav>
             <div id="mobile_link" class="header__menu has-fade">
-                <a href="#apresentacao" class="mobile_link">Apresentanção</a>
-                <a href="#subgrupos" class="mobile_link">Subgrupos</a>
-                <a href="#equipe" class="mobile_link">Equipe</a>
-                <a href="#publicacoes" class="mobile_link">Publicações</a>
-                <a href="#faleconosco" class="mobile_link">Fale conosco</a>
+                <?php
+                    wp_nav_menu(
+                        array(
+                            'theme_location' => 'desktop-navbar',
+                            'menu_class' => 'mobile-menu'
+                        )
+                    );
+                    ?>
             </div>
         </header>

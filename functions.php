@@ -40,10 +40,13 @@
      */
     add_theme_support('menus');
 
+    /**
+     * Menus
+     */
     register_nav_menus(
         array(
-            'navbar' => ''
+            'navbar' => 'Desktop Navbar',
         )
-    )
+    );
 
 ?>
