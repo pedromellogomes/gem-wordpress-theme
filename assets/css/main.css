@@ -1,5 +1,6 @@
 @import 'header.css';
 @import 'footer.css';
+@import 'carrossel.css';
 
 .bodyContainer {
   margin: 0;
@@ -20,16 +21,7 @@ a:hover {
   color: white;
 }
 
-/* Carrossel */
-.carousel-indicators li {
-  width: 10px;
-  height: 10px ;
-  border-radius: 50%;
-}
 
-#MainSlider .carousel-inner, #MainSlider .carousel-item{
-  height: 300px;
-}
 .borderleft{
   border-left: solid;
   border-color: #a0baee;
