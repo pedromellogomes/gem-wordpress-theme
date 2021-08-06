@@ -77,3 +77,7 @@
 #ultimasPublicacoes h3 {
     color:  #021337;
 }
+
+.text-side-box {
+    background-color: var(--secondary);
+}

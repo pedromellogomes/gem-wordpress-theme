@@ -76,16 +76,44 @@
 </section>
 
 <section id="ultimasPublicacoes">
-    <div class="container">
-        <div class="row">
-            <div class="col-sm">
+    <div class="flex py-12">
+        <div class="w-2/3">
+            <div class="flex flex-wrap content-center">
+                <div class="text-side-box w-8 mr-2"></div>
                 <h3>ULTIMAS PUBLICAÇÕES</h3>
             </div>
-            <div class="linha-vertical"></div>
-            <div class="col-sm">
-                <h3 class="text-center">EQUIPE</h3>
-                <p class="text-justify">O GEM nasceu de uma iniciativa individual do Prof. Dr. Thauan Santos (EGN), que identificou a ausência de um grupo sólido de pesquisa no contexto brasileiro sobre a temática em questão. Após mapeamento dos(as) interessados, e consideradas as diversidades regional, de gênero, de formação acadêmica e de experiência profissional, cada pesquisador(a) foi contatado(a) para a formação da equipe.</p>
-                <button type="button" class="btn btn-primary">CONHEÇA NOSSA EQUIPE</button>
+            <div class="flex text-center p-6">
+                <?php
+                    $posts = get_posts([
+                        'post_status' => 'publish',
+                        'numberposts' => 5
+                    ]);
+                    foreach ($posts as $post) :
+                        setup_postdata( $post );
+                ?>
+                <div class="h-1/4 p-6 m-2">
+                    <div class="h-44 w-36 m-2 rounded-md bg-gray-300">
+                        thumbnail
+                    </div>
+                    <a href="<?php the_permalink(); ?>" class="">
+                        <?php the_title(); ?>
+                    </a>
+                </div>
+                <?php
+                    endforeach;
+                    wp_reset_postdata();
+                ?>
+            </div>
+        </div>
+
+        <div class="linha-vertical"></div>
+        <div class="w-1/3">
+            <div class="flex flex-col justify-center px-32">
+                <div>
+                    <h3 class="text-center">EQUIPE</h3>
+                </div>
+                <p class="text-justify text-black">O GEM nasceu de uma iniciativa individual do Prof. Dr. Thauan Santos (EGN), que identificou a ausência de um grupo sólido de pesquisa no contexto brasileiro sobre a temática em questão. Após mapeamento dos(as) interessados, e consideradas as diversidades regional, de gênero, de formação acadêmica e de experiência profissional, cada pesquisador(a) foi contatado(a) para a formação da equipe.</p>
+                <a href="http://">Saiba mais</a>
             </div>
         </div>
     </div>
