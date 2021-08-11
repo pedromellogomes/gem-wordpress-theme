@@ -27,5 +27,5 @@ function openCloseMobileMenu() {
   }
 }
 
-// CAROUSEL SCRIPT 
+// CAROUSEL SCRIPT
 $('.carousel').carousel();

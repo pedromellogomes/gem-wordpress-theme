@@ -1,4 +1,8 @@
 /* Carrossel */
+.section-carousel img {
+    height: 600px;
+    object-fit: cover;
+}
 .carousel-indicators li {
     width: 10px;
     height: 10px ;
