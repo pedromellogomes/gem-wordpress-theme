@@ -35,9 +35,9 @@ if ( ! function_exists( 'gem_global_variables' ) ) {
  * Initial theme setup.
  * 
  */
-if ( ! function_exists( 'gem_theme_setup' ) ) {
+if ( ! function_exists( 'gem_setup_theme' ) ) {
 
-    function gem_theme_setup() {
+    function gem_setup_theme() {
         /**
          * 
          */
@@ -46,9 +46,7 @@ if ( ! function_exists( 'gem_theme_setup' ) ) {
         /**
          * Add post thumbnail support.
          */
-        add_theme_support( 'post-thumbnails', array( 'post', 'policybrief', 'article' ) );
-        set_post_thumbnail_size( 1568, 9999 );
-
+        add_theme_support( 'post-thumbnails' );
 
         /**
          * Allow post images to align widely.
@@ -66,7 +64,7 @@ if ( ! function_exists( 'gem_theme_setup' ) ) {
 
     }
 
-    add_action( 'after_theme_setup', 'gem_theme_setup' );
+    add_action( 'after_setup_theme', 'gem_setup_theme' );
 }
 
 /**
@@ -142,7 +140,7 @@ if ( ! function_exists( 'gem_register_post_types' ) ) {
             'labels'        => $policybrief,
             'description'   => 'New post types for GEM.',
             'public'        => true,
-            'supports'      => array( 'title', 'editor', 'comments', 'revisions', 'author', 'page-attributes', 'thumbnail', 'post-formats' ),
+            'supports'      => array( 'title', 'editor', 'revisions', 'author', 'post-formats', 'thumbnail' ),
             'taxonomies'    => array( 'category', 'post_tag' ),
         ) );
 
@@ -168,7 +166,7 @@ if ( ! function_exists( 'gem_register_post_types' ) ) {
             'labels'                => $article,
             'description'           => 'New post types for GEM.',
             'public'                => true,
-            'supports'              => array(  'title', 'editor', 'comments', 'revisions', 'author', 'page-attributes', 'thumbnail', 'post-formats' ),
+            'supports'              => array( 'title', 'editor', 'revisions', 'author', 'post-formats', 'thumbnail' ),
             'taxonomies'            => array( 'category', 'post_tag' ),
         ) );
         
