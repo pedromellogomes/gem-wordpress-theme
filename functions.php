@@ -12,6 +12,26 @@ if ( ! defined( 'GEM_DIR_URI' ) ) {
 }
 
 /**
+ * Custom global variables.
+ */
+if ( ! function_exists( 'gem_global_variables' ) ) {
+
+    function gem_global_variables() {
+        global $GEM_DIR_PATH;
+        $GEM_DIR_PATH = GEM_DIR_PATH;
+        
+        global $GEM_DIR_URI;
+        $GEM_DIR_URI = GEM_DIR_URI;
+        
+        global $SUBGRUPO_DIR_HEADER;
+        $SUBGRUPO_DIR_HEADER = $GEM_DIR_URI . '/assets/img/subgrupo/header';
+        
+        global $SUBGRUPO_DIR_INFOGRAFICO;
+        $SUBGRUPO_DIR_INFOGRAFICO = $GEM_DIR_URI . '/assets/img/subgrupo/infografico';
+    }
+    add_action( 'init', 'gem_global_variables' );
+}
+/**
  * Initial theme setup.
  * 
  */
