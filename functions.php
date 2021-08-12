@@ -12,12 +12,32 @@ if ( ! defined( 'GEM_DIR_URI' ) ) {
 }
 
 /**
+ * Custom global variables.
+ */
+if ( ! function_exists( 'gem_global_variables' ) ) {
+
+    function gem_global_variables() {
+        global $GEM_DIR_PATH;
+        $GEM_DIR_PATH = GEM_DIR_PATH;
+        
+        global $GEM_DIR_URI;
+        $GEM_DIR_URI = GEM_DIR_URI;
+        
+        global $SUBGRUPO_DIR_HEADER;
+        $SUBGRUPO_DIR_HEADER = $GEM_DIR_URI . '/assets/img/subgrupo/header';
+        
+        global $SUBGRUPO_DIR_INFOGRAFICO;
+        $SUBGRUPO_DIR_INFOGRAFICO = $GEM_DIR_URI . '/assets/img/subgrupo/infografico';
+    }
+    add_action( 'init', 'gem_global_variables' );
+}
+/**
  * Initial theme setup.
  * 
  */
-if ( ! function_exists( 'gem_theme_setup' ) ) {
+if ( ! function_exists( 'gem_setup_theme' ) ) {
 
-    function gem_theme_setup() {
+    function gem_setup_theme() {
         /**
          * 
          */
@@ -26,9 +46,7 @@ if ( ! function_exists( 'gem_theme_setup' ) ) {
         /**
          * Add post thumbnail support.
          */
-        add_theme_support( 'post-thumbnails', array( 'post', 'policybrief', 'article' ) );
-        set_post_thumbnail_size( 1568, 9999 );
-
+        add_theme_support( 'post-thumbnails' );
 
         /**
          * Allow post images to align widely.
@@ -46,7 +64,7 @@ if ( ! function_exists( 'gem_theme_setup' ) ) {
 
     }
 
-    add_action( 'after_theme_setup', 'gem_theme_setup' );
+    add_action( 'after_setup_theme', 'gem_setup_theme' );
 }
 
 /**
@@ -122,7 +140,7 @@ if ( ! function_exists( 'gem_register_post_types' ) ) {
             'labels'        => $policybrief,
             'description'   => 'New post types for GEM.',
             'public'        => true,
-            'supports'      => array( 'title', 'editor', 'comments', 'revisions', 'author', 'page-attributes', 'thumbnail', 'post-formats' ),
+            'supports'      => array( 'title', 'editor', 'revisions', 'author', 'post-formats', 'thumbnail' ),
             'taxonomies'    => array( 'category', 'post_tag' ),
         ) );
 
@@ -148,7 +166,7 @@ if ( ! function_exists( 'gem_register_post_types' ) ) {
             'labels'                => $article,
             'description'           => 'New post types for GEM.',
             'public'                => true,
-            'supports'              => array(  'title', 'editor', 'comments', 'revisions', 'author', 'page-attributes', 'thumbnail', 'post-formats' ),
+            'supports'              => array( 'title', 'editor', 'revisions', 'author', 'post-formats', 'thumbnail' ),
             'taxonomies'            => array( 'category', 'post_tag' ),
         ) );
         
@@ -180,7 +198,7 @@ if ( ! function_exists( 'gem_register_categories' ) ) {
         $new_categories = [
             'Blue Finance'                  => 'blue-finance',
             'Clima e Meio Ambiente'         => 'clima-meio-ambiente',
-            'Conceitos e Métodos'           => 'conceito-metodo',
+            'Conceitos e Métodos'           => 'conceitos-metodos',
             'Construção e Reparação Naval'  => 'construcao-reparacao-naval',
             'Defesa e Segurança'            => 'defesa-seguranca',
             'Energias Offshore'             => 'energias-offshore',
