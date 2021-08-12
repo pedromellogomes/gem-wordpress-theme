@@ -67,6 +67,7 @@
     <h3>Subgrupos</h3>
 </section>
 
+
 <section id="ultimasPublicacoes">
     <div class="flex py-12">
         <div class="w-2/3">
@@ -98,6 +99,7 @@
             </div>
         </div>
 
+
         <div class="linha-vertical"></div>
         <div class="w-1/3">
             <div class="flex flex-col justify-center px-32">
@@ -109,6 +111,6 @@
             </div>
         </div>
     </div>
-</section>
+
 
 <?php get_footer(); ?>
