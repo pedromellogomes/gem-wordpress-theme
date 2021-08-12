@@ -198,7 +198,7 @@ if ( ! function_exists( 'gem_register_categories' ) ) {
         $new_categories = [
             'Blue Finance'                  => 'blue-finance',
             'Clima e Meio Ambiente'         => 'clima-meio-ambiente',
-            'Conceitos e Métodos'           => 'conceito-metodo',
+            'Conceitos e Métodos'           => 'conceitos-metodos',
             'Construção e Reparação Naval'  => 'construcao-reparacao-naval',
             'Defesa e Segurança'            => 'defesa-seguranca',
             'Energias Offshore'             => 'energias-offshore',
