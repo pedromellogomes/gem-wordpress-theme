@@ -1,8 +1,8 @@
 @import 'header.css';
 @import 'footer.css';
 @import 'home.css';
-@import 'carrossel.css';
 @import 'publicacoes.css';
+@import 'category.css';
 
 :root {
   --background-color: #d4d4d4;

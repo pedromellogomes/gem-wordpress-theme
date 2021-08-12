@@ -3,7 +3,7 @@
                 <img src="<?php echo get_template_directory_uri(); ?>/assets/img/logoGEM.png" alt="Logo do GEM" class="w-24 h-auto"/>
             </div>
 
-            <div class="flex justify-around md:pt-24">
+            <div class="flex justify-around md:pt-24 text-white">
                 &copy; Copyright 2021 Grupo Economia do Mar
             </div>
 

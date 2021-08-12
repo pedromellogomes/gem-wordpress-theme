@@ -9,5 +9,5 @@
 
     <body <?php body_class('bodyContainer'); ?>>
         <header class="header">
-            <?php get_template_part( 'template-parts/nav' ); ?>
+            <?php get_template_part( 'template-parts/header/site', 'nav' ); ?>
         </header>
