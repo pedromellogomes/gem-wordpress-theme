@@ -1,50 +1,12 @@
 @import 'header.css';
 @import 'footer.css';
+@import 'home.css';
+@import 'carrossel.css';
+@import 'publicacoes.css';
 
-.bodyContainer {
-  margin: 0;
-  scroll-behavior: smooth;
-  padding: 0;
-  font-family: 'Public Sans', sans-serif;
-  /* color: #9698a6; */
-  overflow-x: hidden;
-  background-color: #cecece;
-}
-
-a {
-  text-decoration: none;
-  color: #2d314d;
-}
-
-a:hover {
-  color: white;
-}
-
-/* Carrossel */
-.carousel-indicators li {
-  width: 10px;
-  height: 10px ;
-  border-radius: 50%;
-}
-
-#MainSlider .carousel-inner, #MainSlider .carousel-item{
-  height: 300px;
-}
-.borderleft{
-  border-left: solid;
-  border-color: #a0baee;
-}
-
-.textrow2{
-  color: #316882;
-    text-align: center;
-    font-weight: bold;
-}
-.subgrupo{
-  text-align: center;
-  font-family: arial;
-  color: #fff;
-}
-.subgrupocontainer{
-  background-color: #02134b;
+:root {
+  --background-color: #d4d4d4;
+  --menu-text-color: #3d9191;
+  --primary:  #c3c5c6;
+  --secondary: #002939;
 }

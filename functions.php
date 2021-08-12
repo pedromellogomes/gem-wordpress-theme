@@ -1,37 +1,203 @@
 <?php
 
-    /**
-     * Add title page
-     */
-    function gem_theme_support() {
-        add_theme_support('title-tag');
+/**
+ * Definitions.
+ */
+if ( ! defined( 'GEM_DIR_PATH' ) ) {
+    define( 'GEM_DIR_PATH', untrailingslashit( get_template_directory() ) );
+}
+
+if ( ! defined( 'GEM_DIR_URI' ) ) {
+	define( 'GEM_DIR_URI', untrailingslashit( get_template_directory_uri() ) );
+}
+
+/**
+ * Initial theme setup.
+ * 
+ */
+if ( ! function_exists( 'gem_theme_setup' ) ) {
+
+    function gem_theme_setup() {
+        /**
+         * 
+         */
+        add_theme_support( 'menus' );
+        
+        /**
+         * Add post thumbnail support.
+         */
+        add_theme_support( 'post-thumbnails', array( 'post', 'policybrief', 'article' ) );
+        set_post_thumbnail_size( 1568, 9999 );
+
+
+        /**
+         * Allow post images to align widely.
+         */
+        add_theme_support( 'align-wide' );
+
+        /**
+         * Change markeup form to a valid HTML 5.
+         */
+        add_theme_support( 'html5', [
+            'search-form',
+            'script',
+            'style'
+        ] );
+
     }
-    add_action('after_theme_setup', 'gem_theme_support');
 
-    /**
-     * Add styles
-     */
-    function gem_register_styles() {
-        $version = wp_get_theme()->get( 'Version' );
+    add_action( 'after_theme_setup', 'gem_theme_setup' );
+}
 
-        wp_enqueue_style('gem-style', get_template_directory_uri() . '/assets/css/style.css', array('gem-tailwind-css', 'gem-bootstrap-css'), $version, 'all');
-        wp_enqueue_style('gem-tailwind-css', 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css', array(), '1.0.0', 'all');
-        wp_enqueue_style('gem-bootstrap-css', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/css/bootstrap.min.css', array(), '5.0.1', 'all');
+/**
+ * Load scripts and styles.
+ * 
+ */
+if ( ! function_exists( 'gem_enqueue_scripts_and_styles' ) ) {
+
+    function gem_enqueue_scripts_and_styles() {
+        /**
+         * Enqueue CSS.
+         */
+        wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', [], '4.0.0', 'all' );
+        wp_enqueue_style( 'tailwind', 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css', [], '2.0', 'all' );
+        wp_enqueue_style( 'main', GEM_DIR_URI . '/assets/css/main.css', [ 'bootstrap', 'tailwind' ] , filemtime( GEM_DIR_PATH . '/assets/css/main.css'), 'all' );
+        wp_enqueue_style( 'style', get_stylesheet_uri() );
+
+        /**
+         * Enqueue Javascript.
+         */
+        wp_enqueue_script( 'jquery-js', 'https://code.jquery.com/jquery-3.5.1.slim.min.js',  [ ], 3.5, false );
+        wp_enqueue_script( 'popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js',  [ 'jquery-js' ], 1.16, false );
+        wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js',  [ 'popper', 'jquery-js' ], 4.6, true );
+        wp_enqueue_script( 'main', GEM_DIR_URI . '/assets/js/main.js', [ 'bootstrap', 'jquery-js' ], filemtime( GEM_DIR_PATH . '/assets/js/main.js'), true );
+    }
+
+    add_action( 'wp_enqueue_scripts', 'gem_enqueue_scripts_and_styles' );
+}
+
+/**
+ * Register menus.
+ * 
+ */
+if ( ! function_exists( 'gem_register_menus' ) ) {
+
+    function gem_register_menus() {
+        register_nav_menus([
+            'header' => __( 'Header menu', 'gem' ),
+            'footer' => __( 'Footer menu', 'gem' ),
+        ]);
+    }
+
+    add_action( 'init', 'gem_register_menus' );
+}
+
+/**
+ * Create new post types.
+ * 
+ * - policy brief
+ * - article
+ * 
+ */
+if ( ! function_exists( 'gem_register_post_types' ) ) {
+
+    function gem_register_post_types() {
+
+        $plural = 'Policy Briefs';
+        $singular = 'Policy Brief';
+
+        $policybrief = array(
+            'name'                 => _x( $plural, 'Post type general name', 'gem' ),
+            'singular_name'        => _x( $singular, 'Post type singular name', 'gem' ),
+            'menu_name'            => _x( $plural, 'Admin Menu text', 'gem' ),
+            'name_admin_bar'       => _x( $singular, 'Add New on Toolbar', 'gem' ),
+            'add_new'              => _x( 'Add New ' . $singular, 'gem' ),
+            'add_new_item'         => _x( 'New ' . $singular, 'gem' ),
+            'edit_item'            => _x( 'Edit ' . $singular, 'gem' ),
+            'view_item'            => __( 'View ' . $singular, 'gem' ),
+            'all_items'            => __( 'All ' . $plural, 'gem' ),
+        );
+
+        register_post_type( 'policybrief', array(
+            'labels'        => $policybrief,
+            'description'   => 'New post types for GEM.',
+            'public'        => true,
+            'supports'      => array( 'title', 'editor', 'comments', 'revisions', 'author', 'page-attributes', 'thumbnail', 'post-formats' ),
+            'taxonomies'    => array( 'category', 'post_tag' ),
+        ) );
+
+        unset($plural);
+        unset($singular);
+
+        $plural = 'Articles';
+        $singular = 'Article';
+
+        $article = array(
+            'name'                 => _x( $plural, 'Post type general name', 'gem' ),
+            'singular_name'        => _x( $singular, 'Post type singular name', 'gem' ),
+            'menu_name'            => _x( $plural, 'Admin Menu text', 'gem' ),
+            'name_admin_bar'       => _x( $singular, 'Add New on Toolbar', 'gem' ),
+            'add_new'              => _x( 'Add New ' . $singular, 'gem' ),
+            'add_new_item'         => _x( 'New ' . $singular, 'gem' ),
+            'edit_item'            => _x( 'Edit ' . $singular, 'gem' ),
+            'view_item'            => __( 'View ' . $singular, 'gem' ),
+            'all_items'            => __( 'All ' . $plural, 'gem' ),
+        );
+
+        register_post_type( 'article', array(
+            'labels'                => $article,
+            'description'           => 'New post types for GEM.',
+            'public'                => true,
+            'supports'              => array(  'title', 'editor', 'comments', 'revisions', 'author', 'page-attributes', 'thumbnail', 'post-formats' ),
+            'taxonomies'            => array( 'category', 'post_tag' ),
+        ) );
         
     }
-    add_action('wp_enqueue_scripts', 'gem_register_styles');
 
-    /**
-     * Add js code
-     */
-    function gem_register_scripts() {
-        $version = wp_get_theme()->get('Version');
+    add_action( 'init', 'gem_register_post_types' );
+}
 
-        wp_enqueue_script('gem-js', get_template_directory_uri() . '/assets/js/main.js', array(), $version, true);
-        wp_enqueue_script('gem-jquery-js', 'https://code.jquery.com/jquery-3.6.0.slim.min.js', array(), '3.6.0', true);
-        wp_enqueue_script('gem-popper-js', 'https://cdn.jsdelivr.net/npm/@popperjs/core@2.9.2/dist/umd/popper.min.js', array(), '2.9.2', true);
-        wp_enqueue_script('gem-bootstrap-js', 'https://cdn.jsdelivr.net/npm/bootstrap@5.0.1/dist/js/bootstrap.min.js', array(), '5.0.1', true);
+/**
+ * Create new categories.
+ * 
+ * - Blue Finance
+ * - Clima e Meio Ambiente
+ * - Conceitos e Métodos
+ * - Construção e Reparação Naval
+ * - Defesa e Segurança
+ * - Energias Offshore
+ * - Minerais Offshore
+ * - Pesca e Aquicultura
+ * - Relações Geopolíticas
+ * - Relações Sociais
+ * - Transporte e Infraestrutura
+ * - Turismo, Esporte e Lazer
+ * 
+ */
+if ( ! function_exists( 'gem_register_categories' ) ) {
+
+    function gem_register_categories() {
+        $new_categories = [
+            'Blue Finance'                  => 'blue-finance',
+            'Clima e Meio Ambiente'         => 'clima-meio-ambiente',
+            'Conceitos e Métodos'           => 'conceito-metodo',
+            'Construção e Reparação Naval'  => 'construcao-reparacao-naval',
+            'Defesa e Segurança'            => 'defesa-seguranca',
+            'Energias Offshore'             => 'energias-offshore',
+            'Minerais Offshore'             => 'minerais-offshore',
+            'Pesca e Aquicultura'           => 'pesca-aquicultura',
+            'Relações Geopolíticas'         => 'relacoes-geopoliticas',
+            'Relações Sociais'              => 'relacoes-sociais',
+            'Transporte e Infraestrutura'   => 'transporte-infraestrutura',
+            'Turismo, Esporte e Lazer'      => 'turismo-esporte-lazer'
+        ];
+
+        foreach($new_categories as $name => $slug) {
+            wp_insert_term( $name, 'category', [ 'slug' => $slug ] );
+        }
+        
     }
-    add_action('wp_enqueue_scripts', 'gem_register_scripts');
 
+    add_action( 'init', 'gem_register_categories' );
+}
 ?>
