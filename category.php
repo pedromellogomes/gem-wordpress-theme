@@ -7,12 +7,12 @@
 ?>
     <!-- Category header image. -->
     <section>
-        <img src="<?php echo $SUBGRUPO_DIR_HEADER; ?>/<?php echo $category->slug; ?>.jpg" alt="<?php echo $category->name ?> imagem de cabeçalho" >
+        <img src="<?php echo $IMG_DIR; ?>/subgrupo/header/<?php echo $category->slug; ?>.jpg" alt="<?php echo $category->name ?> imagem de cabeçalho" >
     </section>
     
     <!-- Category infographic -->
     <section>
-        <img src="<?php echo $SUBGRUPO_DIR_INFOGRAFICO; ?>/<?php echo $category->slug; ?>.svg"" alt="<?php echo $category->name ?> infográfico">
+        <img src="<?php echo $IMG_DIR; ?>/subgrupo/infografico<?php echo $category->slug; ?>.svg"" alt="<?php echo $category->name ?> infográfico">
     </section>
 
     <!-- Policy Brief by category session -->
@@ -50,10 +50,10 @@
     </section>
 
     <!-- Articles by category session -->
-    <section class="flex flex-col items-center py-12 fundo-materias">
+    <section class="flex flex-col items-center py-12 background-reverso">
         <?php $article = new WP_Query([ 'post_type' => 'article', 'category_name' => $category->slug, 'post_status' => 'publish', 'posts_per_page' => 3 ]); ?>
         <div>
-            <h1 class="font-bold font-color-materias"> MATÉRIAS </h1>
+            <h1 class="font-bold font-clara"> MATÉRIAS </h1>
         </div>
         
         <div class="grid grid-col-1 md:grid-cols-2">
@@ -62,7 +62,7 @@
                 <?php while ( $article->have_posts() ) : $article->the_post(); ?>
                     <div class="text-center mx-12 my-6 p-6">
                         
-                        <div class="p-2 font-color-materias">
+                        <div class="p-2 font-clara">
                             <!-- Post link -->
                             <a href="<?php the_permalink(); ?>" class="font-bold text-xl">
                                 <?php the_title(); ?>
