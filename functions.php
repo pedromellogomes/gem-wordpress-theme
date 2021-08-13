@@ -23,11 +23,8 @@ if ( ! function_exists( 'gem_global_variables' ) ) {
         global $GEM_DIR_URI;
         $GEM_DIR_URI = GEM_DIR_URI;
         
-        global $SUBGRUPO_DIR_HEADER;
-        $SUBGRUPO_DIR_HEADER = $GEM_DIR_URI . '/assets/img/subgrupo/header';
-        
-        global $SUBGRUPO_DIR_INFOGRAFICO;
-        $SUBGRUPO_DIR_INFOGRAFICO = $GEM_DIR_URI . '/assets/img/subgrupo/infografico';
+        global $IMG_DIR;
+        $IMG_DIR = $GEM_DIR_URI . '/assets/img';
     }
     add_action( 'init', 'gem_global_variables' );
 }
@@ -76,6 +73,10 @@ if ( ! function_exists( 'gem_setup_theme' ) ) {
 if ( ! function_exists( 'gem_enqueue_scripts_and_styles' ) ) {
 
     function gem_enqueue_scripts_and_styles() {
+        /**
+         * Enqueue fonts.
+         */
+        wp_enqueue_style( 'font-ubuntu', 'http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin', [], '', 'all' );
         /**
          * Enqueue CSS.
          */

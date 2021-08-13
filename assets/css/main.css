@@ -3,10 +3,29 @@
 @import 'home.css';
 @import 'publicacoes.css';
 @import 'category.css';
+@import 'apresentacao.css';
 
 :root {
   --background-color: #d4d4d4;
   --menu-text-color: #3d9191;
   --primary:  #c3c5c6;
   --secondary: #002939;
+}
+
+body {
+  font-family: Ubuntu;
+  background-color: #d4d4d4;
+  color: #00303f;
+}
+
+.background-reverso {
+  background-color: #00303f;
+}
+
+.font-clara {
+  color: #d4d4d4;
+}
+
+.fit-thumbnail {
+  object-fit: cover;
 }
