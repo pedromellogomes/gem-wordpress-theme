@@ -40,3 +40,17 @@ a:hover {
 .subgrupocontainer{
   background-color: #02134b;
 }
+.testando{
+  display: contents;
+}
+.textSpan1{    
+  font-size: 1.5rem;
+  color: #316882;
+  text-align: center;
+  font-weight: bold;
+}
+.textSpa2{
+  text-align: center;
+  color: #000;
+  margin: 1% 5% 1% 5%;
+}

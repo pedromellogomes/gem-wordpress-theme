@@ -1,4 +1,5 @@
-<?php  /* Template Name: Publicações */ ?>
+<?php  /* Template Name: Publicações */  ?>
+
 <?php get_header(); ?>
 
 <section>

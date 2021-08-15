@@ -61,7 +61,7 @@
 </section>
 
 <section id="newsletter" class="flex flex-wrap flex-col content-center justify-center text-center p-6 pt-20 pb-20 ">
-    <div class="md:w-1/2">
+    <div id="eraseDiv"  class="md:w-1/2">
         <h1>Newsletter</h1>
         <h3 class="font-light italic text-sm md:text-base">Fiquei por dentro. Assine nossa newsletter e receba tudo no seu email.</h3>
 
@@ -75,7 +75,9 @@
             <div>
                 <input type="checkbox" name="policybrief" id="policybrief" />
                 <label for="policybrief" class="text-sm md:text-base">Desejo receber o policy brief</label>
+               
             </div>
+            <button id="btnTeste" ></button>
         </div>
     </div>
 </section>
