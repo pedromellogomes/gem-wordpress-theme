@@ -73,6 +73,56 @@
 
 <section id="subgrupos">
     <h3>Subgrupos</h3>
+    <div class="row">
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/bluefinance.svg"" alt=""></a>
+            <p>BLUE FINANCE</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/meioambiente.svg"" alt=""></a>
+            <p>CLIMA E MEIO AMBIENTE</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/metodos.svg"" alt=""></a>
+            <p>CONCEITOS E MÉTODOS</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/reparos.svg"" alt=""></a>
+            <p>CONSTRUÇÃO E REPARAÇÃO NAVAL</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/seguranca.svg"" alt=""></a>
+            <p>DEFESA E SEGURANÇA</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/energia.svg"" alt=""></a>
+            <p>ENERGIAS OFFSHORE</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/minerios.svg"" alt=""></a>
+            <p>MINÉRIOS OFFSHORE</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/pesca.svg"" alt=""></a>
+            <p>PESCA E AQUACULTURA</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/geopolitica.svg"" alt=""></a>
+            <p>RELAÇÕES GEOPOLÍTICAS</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/relacoessociais.svg"" alt=""></a>
+            <p>RELAÇÕES SOCIAIS</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/transporte.svg"" alt=""></a>
+            <p>TRANSPORTE E INFRAESTRUTURA</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/turismo.svg"" alt=""></a>
+            <p>TURISMO, ESPORTE E LAZER</p>
+        </div>
+    </div>
 </section>
 
 <section id="ultimasPublicacoes">
