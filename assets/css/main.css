@@ -3,6 +3,7 @@
 @import 'home.css';
 @import 'publicacoes.css';
 @import 'category.css';
+@import 'assine.css';
 
 :root {
   --background-color: #d4d4d4;
