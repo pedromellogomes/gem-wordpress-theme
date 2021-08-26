@@ -1,6 +1,3 @@
-<<<<<<< HEAD
-page-assine.php
-=======
 <?php get_header(); ?>
 
 <section>
@@ -26,4 +23,3 @@ page-assine.php
 </section>
 
 <?php get_footer(); ?>
->>>>>>> 5d12e1622ea8e5c72985b806233528900e766b63
