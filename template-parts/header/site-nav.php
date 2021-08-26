@@ -29,7 +29,7 @@
     </div>
     
     <!-- Sign link -->
-    <a href="<?php echo get_template_directory_uri(); ?>/template-parts/page/page-assine.php" class="flex flex-wrap items-center justify-around buttonAssine hide-for-mobile divide-x-2 divide-solid">
+    <a href="" class="flex flex-wrap items-center justify-around buttonAssine hide-for-mobile divide-x-2 divide-solid">
         <div class="mr-6">
             <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/image.svg" hight="20px" width="20px" />
         </div>
