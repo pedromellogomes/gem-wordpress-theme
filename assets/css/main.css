@@ -3,7 +3,11 @@
 @import 'home.css';
 @import 'publicacoes.css';
 @import 'category.css';
+<<<<<<< HEAD
 @import 'apresentacao.css';
+=======
+@import 'assine.css';
+>>>>>>> 5d12e1622ea8e5c72985b806233528900e766b63
 
 :root {
   --background-color: #d4d4d4;
