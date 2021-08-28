@@ -1,0 +1,11 @@
+.wpforms-form input, select, textarea {
+    border-style: solid !important;
+    border-width: 3px !important;
+    border-radius: 10px !important;
+    border-color: gray !important;
+    max-width: 100% !important;
+}
+
+.wpforms-submit-container button {
+    border-radius: 10px !important;
+}
