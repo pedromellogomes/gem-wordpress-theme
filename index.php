@@ -1,29 +1,21 @@
 <?php get_header(); ?>
 
-<section class="">
-    <div id="carousel" class="carousel slide">
-        <div class="carousel-inner" style="width: 100%; height: 400px">
-            <ol class="carousel-indicators">
-                <li data-target="carousel" data-slide-to="0" class="active"></li>
-                <li data-target="carousel" data-slide-to="1"></li>
-                <li data-target="carousel" data-slide-to="2"></li>
-                <li data-target="carousel" data-slide-to="3"></li>
-                <li data-target="carousel" data-slide-to="4"></li>
-            </ol>
+<section class="section-carousel">
+    <div id="carousel" class="carousel slide" data-ride="carousel">
+        <ol class="carousel-indicators">
+            <li data-target="#carousel" data-slide-to="0" class="active"></li>
+            <li data-target="#carousel" data-slide-to="1"></li>
+            <li data-target="#carousel" data-slide-to="2"></li>
+        </ol>
+        <div class="carousel-inner">
             <div class="carousel-item active">
-                <img class="d-block w-100" src="<?php echo get_template_directory_uri() ?>/assets/img/carousel/carousel1.jpg" alt="First slide">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/img/carousel/carousel1.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="<?php echo get_template_directory_uri() ?>/assets/img/carousel/carousel2.jpg" alt="Second slide">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/img/carousel/carousel2.jpg" class="d-block w-100" alt="...">
             </div>
             <div class="carousel-item">
-                <img class="d-block w-100" src="<?php echo get_template_directory_uri() ?>/assets/img/carousel/carousel3.jpg" alt="Third slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="<?php echo get_template_directory_uri() ?>/assets/img/carousel/carousel4.jpg" alt="Fourth slide">
-            </div>
-            <div class="carousel-item">
-                <img class="d-block w-100" src="<?php echo get_template_directory_uri() ?>/assets/img/carousel/carousel5.jpg" alt="Fifth slide">
+                <img src="<?php echo get_template_directory_uri() ?>/assets/img/carousel/carousel3.jpg" class="d-block w-100" alt="...">
             </div>
         </div>
     </div>
@@ -125,8 +117,6 @@
             <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/turismo.svg"" alt=""></a>
             <p>TURISMO, ESPORTE E LAZER</p>
         </div>
-    </div>
-</section>
 
 <section id="ultimasPublicacoes">
     <div class="flex py-12">
@@ -170,6 +160,6 @@
             </div>
         </div>
     </div>
-</section>
+
 
 <?php get_footer(); ?>

@@ -20,12 +20,14 @@ body {
   overflow-x: hidden;
 }
 
-a {
-  text-decoration: none;
-  color: #2d314d;
+.background-reverso {
+  background-color: #00303f;
 }
 
-a:hover {
-  color: white;
+.font-clara {
+  color: #d4d4d4;
 }
 
+.fit-thumbnail {
+  object-fit: cover;
+}
