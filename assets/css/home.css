@@ -8,13 +8,10 @@
 /* Apresentação */
 #apresentacao {
     background-color: #cecece;
-    padding-top: 60px;
-    padding-bottom: 60px;
 }
 
 #apresentacao p {
     color: black;
-    padding: 20px;
 }
 
 #apresentacao .btn {

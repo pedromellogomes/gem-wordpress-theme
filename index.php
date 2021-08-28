@@ -42,6 +42,8 @@
             <div class="col-sm newsletter">
                 <h5 style="font-weight: bold;">FIQUE POR DENTRO DO MUNDO DA ECONOMIA DO <span style="color: #004b6a;">MAR</span></h5>
                 <p style="font-size: small; padding: 0px;">Assine nossa newsletter e receba também nosso policy brief mensal</p>
+                <?php echo do_shortcode( '[sibwp_form id=4]' ); ?>
+                <!--
                 <form>
                     <div class="form-group row">
                         <label for="exampleInputNome" class="col-sm-2 col-form-label">Nome: </label>
@@ -66,6 +68,7 @@
                     <img src="<?php echo get_template_directory_uri() ?>/assets/img/newsletter_site.svg"/>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
+                -->
             </div>
         </div>
     </div>
