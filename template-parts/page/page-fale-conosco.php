@@ -10,7 +10,7 @@
             <div class="text-3xl font-semibold text-center my-10">
                 Fale com o GEM
             </div>
-            <?php echo do_shortcode( '[wpforms id="35"]' ); ?>
+            <?php echo do_shortcode( '[wpforms id="37"]' ); ?>
         </div>
     </section>
     <section class="md:justify-self-start md:flex md:items-center">
@@ -19,17 +19,14 @@
             <div class="px-20">
                 Nossas redes sociais:
                 <div class="flex justify-around my-4">
-                    <a href="">
+                    <a href="https://www.facebook.com/grupoeconomiadomar">
                         <img src="<?php echo $IMG_DIR; ?>/fale-conosco/facebook.svg" class="h-6" alt="">
                     </a>
-                    <a href="">
+                    <a href="https://www.instagram.com/grupoeconomiadomar">
                         <img src="<?php echo $IMG_DIR; ?>/fale-conosco/instagram.svg" class="h-6" alt="">
                     </a>
-                    <a href="">
+                    <a href="https://www.linkedin.com/company/grupoeconomiadomar">
                         <img src="<?php echo $IMG_DIR; ?>/fale-conosco/linkedin.svg" class="h-6" alt="">
-                    </a>
-                    <a href="">
-                        <img src="<?php echo $IMG_DIR; ?>/fale-conosco/email.svg" class="h-6" alt="">
                     </a>
                 </div>
             </div>
