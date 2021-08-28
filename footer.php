@@ -10,14 +10,14 @@
             <div>
                 <div class="footer_faleconosco font-bold py-2">FALE CONOSCO</div>
                 <div class="flex justify-around">
-                    <a href="#">
+                    <a href="https://www.facebook.com/grupoeconomiadomar">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/facebook.svg" hight="20px" width="20px" />
                     </a>
-                    <a href="#">
-                        <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/linkedin.svg" hight="20px" width="20px" />
-                    </a>
-                    <a href="#">
+                    <a href="https://www.instagram.com/grupoeconomiadomar">
                         <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/instagram.svg" hight="20px" width="20px" />
+                    </a>
+                    <a href="https://www.linkedin.com/company/grupoeconomiadomar">
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/linkedin.svg" hight="20px" width="20px" />
                     </a>
                 </div>
             </div>
