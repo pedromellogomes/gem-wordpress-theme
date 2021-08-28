@@ -8,10 +8,17 @@
 /* Apresentação */
 #apresentacao {
     background-color: #cecece;
+    padding-top: 30px;
 }
 
 #apresentacao p {
     color: black;
+}
+
+#apresentacao .texto {
+    padding: 20px;
+    margin-left: 10px;
+    margin-right: 10px;
 }
 
 #apresentacao .btn {
@@ -23,6 +30,8 @@
     height: 400px;
     border-left: 2px solid;
     border-color: #9cb7f3;
+    padding: 20px;
+    margin-bottom: 30px;
 }
 
 /*Newsletter*/
