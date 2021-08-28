@@ -117,6 +117,8 @@
             <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/turismo.svg"" alt=""></a>
             <p>TURISMO, ESPORTE E LAZER</p>
         </div>
+    </div>
+</section>
 
 <section id="ultimasPublicacoes">
     <div class="flex py-12">
@@ -160,6 +162,7 @@
             </div>
         </div>
     </div>
+</section>
 
 
 <?php get_footer(); ?>
