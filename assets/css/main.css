@@ -5,6 +5,7 @@
 @import 'category.css';
 @import 'apresentacao.css';
 @import 'fale-conosco.css';
+@import 'category.css';
 
 :root {
   --background-color: #d4d4d4;

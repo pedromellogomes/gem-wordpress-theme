@@ -1,0 +1,7 @@
+.category-header-image {
+    height: 400px;
+}
+
+.category-image {
+    object-fit: cover;
+}
