@@ -26,7 +26,7 @@
         <div class="row">
             <div class="col-sm text-center">
                 <h3 style="font-weight: bold;">O QUE É O GEM?</h3>
-                <p class="text-justify">Criado em 2019, o Grupo Economia do Mar (GEM) é o único grupo de pesquisa do Brasil na área de Economia do Mar e Economia Azul, cadastrado no Diretório de Grupos de Pesquisa (DGP) do Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq).
+                <p class="text-justify texto">Criado em 2019, o Grupo Economia do Mar (GEM) é o único grupo de pesquisa do Brasil na área de Economia do Mar e Economia Azul, cadastrado no Diretório de Grupos de Pesquisa (DGP) do Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq).
                 </p>
                 <button type="button" class="btn btn-primary">SAIBA MAIS</button>
             </div>
@@ -34,6 +34,8 @@
             <div class="col-sm newsletter">
                 <h5 style="font-weight: bold;">FIQUE POR DENTRO DO MUNDO DA ECONOMIA DO <span style="color: #004b6a;">MAR</span></h5>
                 <p style="font-size: small; padding: 0px;">Assine nossa newsletter e receba também nosso policy brief mensal</p>
+                <?php echo do_shortcode( '[sibwp_form id=4]' ); ?>
+                <!--
                 <form>
                     <div class="form-group row">
                         <label for="exampleInputNome" class="col-sm-2 col-form-label">Nome: </label>
@@ -58,6 +60,7 @@
                     <img src="<?php echo get_template_directory_uri() ?>/assets/img/newsletter_site.svg"/>
                     <button type="submit" class="btn btn-primary">Submit</button>
                 </form>
+                -->
             </div>
         </div>
     </div>
@@ -65,8 +68,55 @@
 
 <section id="subgrupos">
     <h3>Subgrupos</h3>
-</section>
-
+    <div class="row">
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/bluefinance.svg"" alt=""></a>
+            <p>BLUE FINANCE</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/meioambiente.svg"" alt=""></a>
+            <p>CLIMA E MEIO AMBIENTE</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/metodos.svg"" alt=""></a>
+            <p>CONCEITOS E MÉTODOS</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/reparos.svg"" alt=""></a>
+            <p>CONSTRUÇÃO E REPARAÇÃO NAVAL</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/seguranca.svg"" alt=""></a>
+            <p>DEFESA E SEGURANÇA</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/energia.svg"" alt=""></a>
+            <p>ENERGIAS OFFSHORE</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/minerios.svg"" alt=""></a>
+            <p>MINÉRIOS OFFSHORE</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/pesca.svg"" alt=""></a>
+            <p>PESCA E AQUACULTURA</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/geopolitica.svg"" alt=""></a>
+            <p>RELAÇÕES GEOPOLÍTICAS</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/relacoessociais.svg"" alt=""></a>
+            <p>RELAÇÕES SOCIAIS</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/transporte.svg"" alt=""></a>
+            <p>TRANSPORTE E INFRAESTRUTURA</p>
+        </div>
+        <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+            <a href="#"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/turismo.svg"" alt=""></a>
+            <p>TURISMO, ESPORTE E LAZER</p>
+        </div>
 
 <section id="ultimasPublicacoes">
     <div class="flex py-12">
@@ -98,7 +148,6 @@
                 ?>
             </div>
         </div>
-
 
         <div class="linha-vertical"></div>
         <div class="w-1/3">
