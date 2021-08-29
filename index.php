@@ -70,7 +70,7 @@
 </section>
 
 <section id="subgrupos">
-    <h2>SUBGRUPOS</h2>
+    <h1>SUBGRUPOS</h1>
     <?php
     $categories = get_terms('category', ['hide_empty' => 0 ]);
     ?>
