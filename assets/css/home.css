@@ -65,8 +65,14 @@
     text-align: center;
 }
 
-#subgrupos h3 {
+#subgrupos h2 {
     color: #e7e7e7;
+    padding: 30px;
+    font-weight: bold;
+}
+
+#subgrupos img {
+    padding: 20px;
 }
 
 /*ultimasPublicacoes*/
@@ -82,6 +88,7 @@
 
 #ultimasPublicacoes h3 {
     color:  #021337;
+    padding: 20px;
 }
 
 .text-side-box {

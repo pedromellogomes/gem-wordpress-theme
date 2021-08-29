@@ -5,7 +5,10 @@
         <div class="row">
             <div class="col-sm" id="formularioAssine">
                 <h2>Ficar por dentro do futuro da economia nunca foi tão simples.</h2>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSedVzlEUela8nxwRwW3oHK-6wNMmvDgrxNhY7VNjYlBOjfftQ/viewform">Para assinar é só preencher nosso formulário clicando aqui.</a>
+                <!--
                 <?php echo do_shortcode( '[sibwp_form id=2]' ); ?>
+                -->
             </div>
             <div class="col-sm" id="textoAssine">
                 <h1>Assine</h1>

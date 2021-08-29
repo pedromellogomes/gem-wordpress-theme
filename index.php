@@ -34,7 +34,10 @@
             <div class="col-sm newsletter">
                 <h5 style="font-weight: bold;">FIQUE POR DENTRO DO MUNDO DA ECONOMIA DO <span style="color: #004b6a;">MAR</span></h5>
                 <p style="font-size: small; padding: 0px;">Assine nossa newsletter e receba também nosso policy brief mensal</p>
+                <a href="https://docs.google.com/forms/d/e/1FAIpQLSedVzlEUela8nxwRwW3oHK-6wNMmvDgrxNhY7VNjYlBOjfftQ/viewform">Para assinar é só preencher nosso formulário clicando aqui.</a>
+                <!--
                 <?php echo do_shortcode('[sibwp_form id=2]'); ?>
+                -->
                 <!--
                 <form>
                     <div class="form-group row">
@@ -67,7 +70,7 @@
 </section>
 
 <section id="subgrupos">
-    <h3>Subgrupos</h3>
+    <h2>SUBGRUPOS</h2>
     <?php
     $categories = get_terms('category', ['hide_empty' => 0 ]);
     ?>
