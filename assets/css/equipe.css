@@ -1,9 +1,19 @@
+
+
 .rowDiv{
     display:flex;
+    place-content: center;
   }
   .divText{
     width: 100%;
     text-align: center;
+    text-align: -webkit-center;
+    margin: 10px 0 20px 0px;
+    align-self: center;
+  }
+  .iconeIntro{
+    width: 363px;
+    padding-top: 13px;
   }
   .title{
     color:#00303f;
@@ -17,8 +27,10 @@
   .diversidade{
     background-color: #00303f;
     text-align: -webkit-center;
+    padding-bottom: 25px;
   
   }
+
   .title2{
     color:#d4d4d4;
     font-size: 2.5rem;
@@ -27,6 +39,7 @@
   }
   .equip{
     text-align: -webkit-center;
+    padding-top: 60px;
   }
   .name{
     display: block;
@@ -49,3 +62,12 @@
     justify-content: center;
     flex-wrap: wrap;
   }
+  .icone{
+    width:429px;
+    margin: 0px 20px 0px 20px;
+  }
+  .gender{
+    margin-right: 160px;
+    width: 261px;
+  }
+ 

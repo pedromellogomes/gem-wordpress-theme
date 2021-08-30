@@ -1,0 +1,90 @@
+<svg id="Camada_1" data-name="Camada 1" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" viewBox="0 0 177 168.55">
+  <defs>
+    <style>
+      .cls-1 {
+        fill: none;
+      }
+
+      .cls-2 {
+        clip-path: url(#clip-path);
+      }
+
+      .cls-3 {
+        fill: #389192;
+      }
+
+      .cls-4 {
+        fill: #d4d4d4;
+      }
+
+      .cls-11, .cls-5 {
+        font-size: 10.23px;
+        fill: #00303f;
+        font-family: Ubuntu-Medium, Ubuntu;
+        font-weight: 500;
+      }
+
+      .cls-5 {
+        letter-spacing: 0.06em;
+      }
+
+      .cls-6 {
+        letter-spacing: 0.07em;
+      }
+
+      .cls-7 {
+        letter-spacing: 0.09em;
+      }
+
+      .cls-8 {
+        letter-spacing: 0.06em;
+      }
+
+      .cls-9 {
+        letter-spacing: 0.06em;
+      }
+
+      .cls-10 {
+        clip-path: url(#clip-path-2);
+      }
+
+      .cls-11 {
+        letter-spacing: 0.08em;
+      }
+
+      .cls-12 {
+        letter-spacing: 0.07em;
+      }
+
+      .cls-13 {
+        letter-spacing: 0.08em;
+      }
+
+      .cls-14 {
+        letter-spacing: 0.07em;
+      }
+
+      .cls-15 {
+        letter-spacing: 0.06em;
+      }
+    </style>
+    <clipPath id="clip-path" transform="translate(7.87 17.03)">
+      <path class="cls-1" d="M19.33,14.61a14.08,14.08,0,1,1,14.08,14A14,14,0,0,1,19.33,14.61Zm47,35.63a19,19,0,0,0-19-18.77H19.54a19,19,0,0,0-19,18.77v31a6.08,6.08,0,0,0,12.15,0V53h2.9v79.41a8.16,8.16,0,0,0,16.31,0V93.24H35v39.19a8.16,8.16,0,0,0,16.31,0V53h2.9V81.21a6.08,6.08,0,0,0,12.15,0v-31Z"/>
+    </clipPath>
+    <clipPath id="clip-path-2" transform="translate(7.87 17.03)">
+      <path class="cls-1" d="M115.33,16.46a13.93,13.93,0,1,1,13.93,13.82A13.87,13.87,0,0,1,115.33,16.46ZM164.74,81.2l-11-34.05a4.63,4.63,0,0,0-.29-.64c-4.39-11-14.18-13.65-17.64-13.65h-13.2c-3.46,0-13.24,2.61-17.64,13.65a4.59,4.59,0,0,0-.28.64L93.6,81.2A5.48,5.48,0,0,0,104,84.61l10.63-32.8h2.5L99,108.07H113.8v26.42a6.48,6.48,0,0,0,13,0V108.07h4.84v26.42a6.48,6.48,0,0,0,13,0V108.07h14.81L141.21,51.81h2.48l10.65,32.8a5.47,5.47,0,0,0,10.4-3.41Z"/>
+    </clipPath>
+  </defs>
+  <g>
+    <g class="cls-2">
+      <rect class="cls-3" x="0.3" y="96" width="79.47" height="69.53"/>
+      <rect class="cls-4" y="9" width="80" height="88"/>
+    </g>
+    <text class="cls-5" transform="translate(24.83 94.93) scale(1.01 1)">4<tspan class="cls-6" x="6.38" y="0">5</tspan><tspan class="cls-7" x="12.87" y="0">,</tspan><tspan class="cls-8" x="16.53" y="0">2</tspan><tspan class="cls-9" x="22.91" y="0">%</tspan></text>
+    <g class="cls-10">
+      <rect class="cls-3" x="97.82" y="83" width="78.44" height="85.55"/>
+      <rect class="cls-4" x="97" width="80" height="84"/>
+    </g>
+    <text class="cls-11" transform="translate(120.44 94.26) scale(1.01 1)">5<tspan class="cls-12" x="6.58" y="0">4</tspan><tspan class="cls-13" x="13.13" y="0">,</tspan><tspan class="cls-14" x="16.71" y="0">8</tspan><tspan class="cls-15" x="23.2" y="0">%</tspan></text>
+  </g>
+</svg>

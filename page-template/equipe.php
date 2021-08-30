@@ -5,11 +5,13 @@
         <div class="divText">
     <h1 class="title">OBJETIVO</h1 >
     <span class="text" >Contribuir com as políticas públicas nacionais e regionais relacionadas à economia do mar.<span>
+    <img class="iconeIntro" src="<?php echo get_template_directory_uri() ?>.\assets\img\equipe\intro\Objetivo.svg">
     </div>
     <div class="divText">
     <h1 class="title">MISSÃO</h1 >
     <span class="text" >Prover dados e análises acerca dos setores da economia do mar do Brasil, por meio de cooperação com instituições nacionais e internacionais.<span>
-    </div>
+    <img class="iconeIntro" src="<?php echo get_template_directory_uri() ?>.\assets\img\equipe\intro\Missão.svg">   
+</div>
     </div>
     
     <div class="rowDiv" > 
@@ -17,17 +19,26 @@
     <h1 class="title">VISÃO</h1 >
     <span class="text" >Se consolidar como um grupo de pesquisa de referência nos estudos brasileiros sobre economia do mar, contribuindo com a transformação da realidade nacional e promovendo o desenvolvimento sustentável.
 <span>
+<img class="iconeIntro" src="<?php echo get_template_directory_uri() ?>.\assets\img\equipe\intro\Valores.svg">
     </div>
     <div class="divText">
     <h1 class="title">VALORES</h1 >
     <span class="text" >
 Sustentabilidade, ética, diversidade, excelência, independência e transparência.<span>
+<img class="iconeIntro" src="<?php echo get_template_directory_uri() ?>.\assets\img\equipe\intro\Objetivo.svg">
     </div>
     </div>
     </div>
     <div class="diversidade">
         <h1 class="title2">diversidade</h1>
-        
+        <div class="rowDiv">
+        <img class="icone" src="<?php echo get_template_directory_uri() ?>.\assets\img\equipe\diversidade\Diversidade regional texto.svg">
+        <img class="icone" src="<?php echo get_template_directory_uri() ?>.\assets\img\equipe\diversidade\Diversidade de formação texto.svg">
+</div>
+<div class="rowDiv">
+        <img class="icone gender" src="<?php echo get_template_directory_uri() ?>.\assets\img\equipe\diversidade\Diversidade de gênero.svg">
+        <img class="icone " src="<?php echo get_template_directory_uri() ?>.\assets\img\equipe\diversidade\Diversidade de experiência texto.svg">
+</div>
     </div>
 <div class="equip">
 <div>
