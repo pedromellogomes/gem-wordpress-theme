@@ -71,9 +71,7 @@
 
 <section id="subgrupos">
     <h1>SUBGRUPOS</h1>
-    <?php
-    $categories = get_terms('category', ['hide_empty' => 0 ]);
-    ?>
+    <?php $categories = get_terms('category', ['hide_empty' => 0 ]); ?>
     <div class="row">
         <?php
         foreach ($categories as $term) :
@@ -81,57 +79,60 @@
             if($category->slug!="sem-categoria"):
         ?>
             <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
-                <a href="<?php echo get_term_link($category->term_id); ?>"><img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/<?php echo $category->slug; ?>.svg"" alt=""></a>
+                <a href="<?php echo get_term_link($category->term_id); ?>">
+                    <img src="<?php echo get_template_directory_uri() ?>/assets/img/Subgrupos/SVG/com_fundo/<?php echo $category->slug; ?>.svg"" alt="">
+                </a>
             <p><?php echo $category->name; ?></p>
         </div>
-    <?php endif;
-    endforeach;
+    <?php 
+        endif;
+        endforeach;
     ?>
     </div>
 </section>
 
 <section id=" ultimasPublicacoes">
-                    <div class="flex py-12">
-                        <div class="w-2/3">
-                            <div class="flex flex-wrap content-center">
-                                <div class="text-side-box w-8 mr-2"></div>
-                                <h3>ULTIMAS PUBLICAÇÕES</h3>
-                            </div>
-                            <div class="flex text-center p-6">
-                                <?php
-                                $posts = get_posts([
-                                    'post_status' => 'publish',
-                                    'numberposts' => 5
-                                ]);
-                                foreach ($posts as $post) :
-                                    setup_postdata($post);
-                                ?>
-                                    <div class="h-1/4 p-6 m-2">
-                                        <div class="h-44 w-36 m-2 rounded-md bg-gray-300">
-                                            thumbnail
-                                        </div>
-                                        <a href="<?php the_permalink(); ?>" class="">
-                                            <?php the_title(); ?>
-                                        </a>
-                                    </div>
-                                <?php
-                                endforeach;
-                                wp_reset_postdata();
-                                ?>
-                            </div>
+    <div class="flex py-12">
+        <div class="w-2/3">
+            <div class="flex flex-wrap content-center">
+                <div class="text-side-box w-8 mr-2"></div>
+                <h3>ULTIMAS PUBLICAÇÕES</h3>
+            </div>
+            <div class="flex text-center p-6">
+                <?php
+                $posts = get_posts([
+                    'post_status' => 'publish',
+                    'numberposts' => 5
+                ]);
+                foreach ($posts as $post) :
+                    setup_postdata($post);
+                ?>
+                    <div class="h-1/4 p-6 m-2">
+                        <div class="h-44 w-36 m-2 rounded-md bg-gray-300">
+                            thumbnail
                         </div>
-
-                        <div class="linha-vertical"></div>
-                        <div class="w-1/3">
-                            <div class="flex flex-col justify-center px-32">
-                                <div>
-                                    <h3 class="text-center">EQUIPE</h3>
-                                </div>
-                                <p class="text-justify text-black">O GEM nasceu de uma iniciativa individual do Prof. Dr. Thauan Santos (EGN), que identificou a ausência de um grupo sólido de pesquisa no contexto brasileiro sobre a temática em questão. Após mapeamento dos(as) interessados, e consideradas as diversidades regional, de gênero, de formação acadêmica e de experiência profissional, cada pesquisador(a) foi contatado(a) para a formação da equipe.</p>
-                                <a href="http://">Saiba mais</a>
-                            </div>
-                        </div>
+                        <a href="<?php the_permalink(); ?>" class="">
+                            <?php the_title(); ?>
+                        </a>
                     </div>
+                <?php
+                endforeach;
+                wp_reset_postdata();
+                ?>
+            </div>
+        </div>
+
+        <div class="linha-vertical"></div>
+        <div class="w-1/3">
+            <div class="flex flex-col justify-center px-32">
+                <div>
+                    <h3 class="text-center">EQUIPE</h3>
+                </div>
+                <p class="text-justify text-black">O GEM nasceu de uma iniciativa individual do Prof. Dr. Thauan Santos (EGN), que identificou a ausência de um grupo sólido de pesquisa no contexto brasileiro sobre a temática em questão. Após mapeamento dos(as) interessados, e consideradas as diversidades regional, de gênero, de formação acadêmica e de experiência profissional, cada pesquisador(a) foi contatado(a) para a formação da equipe.</p>
+                <a href="<?php echo get_permalink( get_page_by_path( 'equipe' ) ); ?>">Saiba mais</a>
+            </div>
+        </div>
+    </div>
 </section>
 
 
