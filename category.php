@@ -6,11 +6,20 @@
     $category = get_queried_object();
 ?>
     <section class="hidden md:block category-header-image">
-        <img src="<?php echo $IMG_DIR; ?>/subgrupo/header/<?php echo $category->slug; ?>.jpg" alt="<?php echo $category->name ?> imagem de cabeçalho" class="category-image">
+        <img
+            src="<?php echo $IMG_DIR; ?>/subgrupo/header/<?php echo $category->slug; ?>.jpg"
+            alt="<?php echo $category->name ?> imagem de cabeçalho"
+        />
     </section>
 
-    <section class="p-20">
-        <img src="<?php echo $IMG_DIR; ?>/subgrupo/infografico/<?php echo $category->slug; ?>.svg"" alt="<?php echo $category->name ?> infográfico">
+    <section class="category-infographic-background-color">
+        <div class="md:p-48">
+            <img
+                class="m-auto"
+                src="<?php echo $IMG_DIR; ?>/subgrupo/infografico/<?php echo $category->slug; ?>.svg"
+                alt="<?php echo $category->name ?> infográfico"
+            />
+        </div>
     </section>
 
     <!-- Policy Brief by category session -->
