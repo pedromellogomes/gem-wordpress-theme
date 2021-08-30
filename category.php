@@ -9,7 +9,7 @@
         <img src="<?php echo $IMG_DIR; ?>/subgrupo/header/<?php echo $category->slug; ?>.jpg" alt="<?php echo $category->name ?> imagem de cabeçalho" class="category-image">
     </section>
 
-    <section>
+    <section class="p-20">
         <img src="<?php echo $IMG_DIR; ?>/subgrupo/infografico/<?php echo $category->slug; ?>.svg"" alt="<?php echo $category->name ?> infográfico">
     </section>
 
