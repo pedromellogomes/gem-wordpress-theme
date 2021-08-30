@@ -1,19 +1,36 @@
 #formularioAssine {
     background-color: #00303f;
+    text-align: center;
+    align-items: center;
+    padding: 180px 30px 180px 30px;
+}
+
+#formularioAssine h2 {
+    color: #d4d4d4;
 }
 
 #textoAssine {
     background-color: #d4d4d4;
+    padding: 120px 60px 120px 60px;
+    align-items: center;
 }
 
 #textoAssine h1 {
     color: #00303f;
+    text-align: center;
 }
 
 #textoAssine p {
     color: #00303f;
+    padding: 10px;
 }
 
 #textoAssine ul {
     color: #003847;
+    padding: 10px;
+}
+
+#textoAssine img {
+    height: 50%;
+    padding: 30px;
 }
