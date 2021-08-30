@@ -2,6 +2,7 @@
 @import 'footer.css';
 @import 'home.css';
 @import 'carrossel.css';
+@import 'equipe.css';
 @import 'publicacoes.css';
 @import 'category.css';
 @import 'apresentacao.css';
@@ -21,8 +22,9 @@ body {
   scroll-behavior: smooth;
   padding: 0;
   font-family: 'Public Sans', sans-serif;
-  color: var(--background-color);
+  color: var(--secondary);
   overflow-x: hidden;
+  background:var(--background-color);
 }
 
 .background-reverso {

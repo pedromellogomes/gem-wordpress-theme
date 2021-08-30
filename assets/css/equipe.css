@@ -1,0 +1,90 @@
+.rowDiv{
+  display:flex;
+  padding: 0px 25px 0px 25px;
+  place-content: space-evenly;
+}
+.divText{
+  width: 100%;
+  text-align: center;
+  text-align: -webkit-center;
+  margin: 10px 0 20px 0px;
+  align-self: center;
+}
+.iconeIntro{
+  width: 363px;
+  padding-top: 13px;
+}
+.title{
+  color:#00303f;
+  font-size: 2.5rem;
+ 
+}
+.text{
+  color:#00303f;
+  font-weight: bold;
+}
+.diversidade{
+  background-color: #00303f;
+  text-align: -webkit-center;
+  padding-bottom: 25px;
+  padding-top: 25px;
+
+
+}
+
+.title2{
+  color:#d4d4d4;
+  font-size: 2.5rem;
+  border-bottom: 9px solid #d4d4d4;
+  width: fit-content;
+}
+.equip{
+  text-align: -webkit-center;
+  padding-top: 60px;
+}
+.name{
+  display: block;
+  font-weight: bold;
+  color: #00303f;
+}
+.cargo{
+  font-size: 0.8rem;
+}
+.imagem{
+  width: 100px;
+}
+.portrait{
+  max-width: 300px;
+  margin: 0px 5px 5px 5px;
+  min-width: 300px;
+}
+.allPortrait{
+  display: flex;
+  justify-content: center;
+  flex-wrap: wrap;
+}
+.icone{
+  width:429px;
+  margin: 0px 20px 0px 20px;
+}
+.gender{
+  margin-right: 160px;
+  width: 261px;
+}
+@media only screen and (max-width: 800px) {
+  .iconeIntro{
+    width: 13rem;
+    padding-top: 13px;
+  }
+  .icone{
+    width:8rem;
+    margin: 0px 20px 0px 20px;
+  }
+  .text{
+    color:#00303f;
+    font-weight: bold;
+    font-size: 0.8rem;
+  }
+
+  
+}

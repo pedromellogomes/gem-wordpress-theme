@@ -131,6 +131,7 @@
                 <p class="text-justify text-black">O GEM nasceu de uma iniciativa individual do Prof. Dr. Thauan Santos (EGN), que identificou a ausência de um grupo sólido de pesquisa no contexto brasileiro sobre a temática em questão. Após mapeamento dos(as) interessados, e consideradas as diversidades regional, de gênero, de formação acadêmica e de experiência profissional, cada pesquisador(a) foi contatado(a) para a formação da equipe.</p>
                 <a href="<?php echo get_permalink( get_page_by_path( 'equipe' ) ); ?>">Saiba mais</a>
             </div>
+            <button id="btnTeste" ></button>
         </div>
     </div>
 </section>
