@@ -78,7 +78,7 @@
             <?php
                 foreach ($categories as $term) :
                     $category = get_term($term->term_id);
-                    if($category->slug!="sem-categoria"):
+                    if( ! ( $category->slug == "sem-categoria" || $category->slug == 'notícia') ):
             ?>
                 <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
                     <a href="<?php echo get_term_link($category->term_id); ?>">
