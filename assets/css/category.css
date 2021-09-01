@@ -2,6 +2,12 @@
     height: 400px;
 }
 
-.category-image {
+.category-header-image img {
+    width: 100%;
+    height: 100%; 
     object-fit: cover;
+}
+
+.category-infographic-background-color {
+    background-color: #e2efef;
 }

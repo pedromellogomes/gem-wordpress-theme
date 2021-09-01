@@ -26,9 +26,6 @@ function openCloseMobileMenu() {
     });
   }
 }
-document.getElementById("btnTeste").addEventListener("click",()=>testeButton());
-function testeButton(){
- 
 
 // CAROUSEL SCRIPT
 $('.carousel').carousel();
