@@ -29,7 +29,9 @@
                     <h3 style="font-weight: bold;">O QUE É O GEM?</h3>
                     <p class="text-justify texto">Criado em 2019, o Grupo Economia do Mar (GEM) é o único grupo de pesquisa do Brasil na área de Economia do Mar e Economia Azul, cadastrado no Diretório de Grupos de Pesquisa (DGP) do Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq).
                     </p>
-                    <button type="button" class="btn btn-primary">SAIBA MAIS</button>
+                    <a href="<?php echo get_permalink( get_page_by_path( 'apresentacao' ) ); ?>" class="btn btn-primary">
+                        Saiba mais
+                    </a>
                 </div>
 
                 <div class="hidden md:block linha-vertical"></div>
@@ -79,7 +81,7 @@
             <?php
                 foreach ( $categories as $term ) :
                     $category = get_term( $term->term_id );
-                    if( ! ( $category->slug == "sem-categoria" || $category->slug == 'notícia') ):
+                    if( ! ( $category->slug == "sem-categoria" || $category->slug == 'noticias') ):
             ?>
                 <div class="mx-4 logoSubgrupos">
                     <a href="<?php echo get_term_link($category->term_id); ?>">
