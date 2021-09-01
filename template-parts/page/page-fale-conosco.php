@@ -10,7 +10,7 @@
             <div class="text-3xl font-semibold text-center my-10">
                 Fale com o GEM
             </div>
-            <?php echo do_shortcode( '[wpforms id="37"]' ); ?>
+            <?php echo do_shortcode( '[wpforms id="126"]' ); ?>
         </div>
     </section>
     <section class="md:justify-self-start md:flex md:items-center">
