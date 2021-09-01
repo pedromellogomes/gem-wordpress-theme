@@ -1,4 +1,5 @@
 <?php get_header(); ?>
+
 <main id="home-page">
     <section class="section-carousel">
         <div id="carousel" class="carousel slide" data-ride="carousel">
@@ -9,13 +10,13 @@
             </ol>
             <div class="carousel-inner">
                 <div class="carousel-item active">
-                    <img class="d-block w-100" src="<?php echo get_template_directory_uri() ?>/assets/img/carousel/carousel1.jpg" alt="First slide">
+                    <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/assets/img/carousel/carousel1.jpg" alt="First slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="<?php echo get_template_directory_uri() ?>/assets/img/carousel/carousel2.jpg" alt="Second slide">
+                    <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/assets/img/carousel/carousel2.jpg" alt="Second slide">
                 </div>
                 <div class="carousel-item">
-                    <img class="d-block w-100" src="<?php echo get_template_directory_uri() ?>/assets/img/carousel/carousel3.jpg" alt="Third slide">
+                    <img class="d-block w-100" src="<?php echo get_template_directory_uri(); ?>/assets/img/carousel/carousel3.jpg" alt="Third slide">
                 </div>
             </div>
         </div>
@@ -24,7 +25,7 @@
     <section id="quem-somos">
         <div class="container">
             <div class="row">
-                <div class="col-sm text-center">
+                <div class="col-sm mb-16 md:mb-4 text-center">
                     <h3 style="font-weight: bold;">O QUE É O GEM?</h3>
                     <p class="text-justify texto">Criado em 2019, o Grupo Economia do Mar (GEM) é o único grupo de pesquisa do Brasil na área de Economia do Mar e Economia Azul, cadastrado no Diretório de Grupos de Pesquisa (DGP) do Conselho Nacional de Desenvolvimento Científico e Tecnológico (CNPq).
                     </p>
@@ -33,7 +34,7 @@
 
                 <div class="hidden md:block linha-vertical"></div>
                 
-                <div class="col-sm newsletter">
+                <div class="col-sm mb-16 md:mb-4 newsletter">
                     <h5 style="font-weight: bold;">FIQUE POR DENTRO DO MUNDO DA ECONOMIA DO <span style="color: #004b6a;">MAR</span></h5>
                     <p style="font-size: small; padding: 0px;">Assine nossa newsletter e receba também nosso policy brief mensal</p>
                     <a href="https://docs.google.com/forms/d/e/1FAIpQLSedVzlEUela8nxwRwW3oHK-6wNMmvDgrxNhY7VNjYlBOjfftQ/viewform">Para assinar é só preencher nosso formulário clicando aqui.</a>
@@ -62,7 +63,7 @@
                             <input type="checkbox" class="form-check-input" id="exampleCheck2">
                             <label class="form-check-label" for="exampleCheck2">Desejo receber o policy brief</label>
                         </div>
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/newsletter_site.svg"/>
+                        <img src="<?php echo get_template_directory_uri(); ?>/assets/img/newsletter_site.svg"/>
                         <button type="submit" class="btn btn-primary">Submit</button>
                     </form>
                     -->
@@ -74,15 +75,19 @@
     <section id="subgrupos">
         <h1>SUBGRUPOS</h1>
         <?php $categories = get_terms('category', ['hide_empty' => 0 ]); ?>
-        <div class="row font-clara md:p-12">
+        <div class="flex flex-wrap justify-center content-center font-clara p-6">
             <?php
-                foreach ($categories as $term) :
-                    $category = get_term($term->term_id);
+                foreach ( $categories as $term ) :
+                    $category = get_term( $term->term_id );
                     if( ! ( $category->slug == "sem-categoria" || $category->slug == 'notícia') ):
             ?>
-                <div class="col-6 col-sm-4 col-md-2 logoSubgrupos">
+                <div class="mx-4 logoSubgrupos">
                     <a href="<?php echo get_term_link($category->term_id); ?>">
-                        <img src="<?php echo get_template_directory_uri() ?>/assets/img/subgrupo/icons/<?php echo $category->slug; ?>.svg" alt="">
+                        <img
+                            class="m-auto w-40"
+                            src="<?php echo get_template_directory_uri(); ?>/assets/img/subgrupo/icons/<?php echo $category->slug; ?>.svg"
+                            alt=""
+                        />
                         <div>
                             <?php echo $category->name; ?>
                         </div>
@@ -98,27 +103,37 @@
 
     <section id=" ultimasPublicacoes">
         <div class="flex flex-col md:flex-row py-12">
-            <div class="md:w-2/3">
+            <div class="lg:w-2/3">
                 <div class="flex flex-wrap content-center">
                     <div class="text-side-box w-8 mr-2"></div>
-                    <h2>ULTIMAS PUBLICAÇÕES</h2>
+                    <h2 class="text-xl font-bold">
+                        ULTIMAS PUBLICAÇÕES
+                    </h2>
                 </div>
-                <div class="flex text-center p-6">
+                <div class="flex text-center">
                     <?php
                         $posts = get_posts( [ 'post_status' => 'publish', 'numberposts' => 5 ] );
-                        foreach ($posts as $post) :
-                            setup_postdata($post);
+                        if ( !$posts ) :
                     ?>
-                        <div class="h-1/4 p-6 m-2">
-                            <div class="h-44 w-36 m-2 rounded-md bg-gray-300">
-                                thumbnail
+                            <div class="w-full my-20 text-center">
+                                <p>Ainda não há publicações.</p>
                             </div>
-                            <a href="<?php the_permalink(); ?>" class="">
-                                <?php the_title(); ?>
-                            </a>
-                        </div>
                     <?php
-                        endforeach;
+                        else :
+                            foreach ( $posts as $post ) :
+                                setup_postdata( $post );
+                    ?>
+                                <div class="h-1/4 px-6 m-2">
+                                    <div class="h-44 w-36 m-2 rounded-md bg-gray-300">
+                                        thumbnail
+                                    </div>
+                                    <a href="<?php the_permalink(); ?>" class="">
+                                        <?php the_title(); ?>
+                                    </a>
+                                </div>
+                    <?php
+                            endforeach;
+                        endif;
                         wp_reset_postdata();
                     ?>
                 </div>
@@ -126,10 +141,10 @@
 
             <div class="hidden md:block linha-vertical"></div>
 
-            <div class="md:w-1/3 p-6">
-                <div class="flex flex-col justify-center md:px-32">
+            <div class="lg:w-1/3 px-6">
+                <div class="flex flex-col justify-center lg:px-12">
                     <div>
-                        <h2 class="text-center">
+                        <h2 class="text-center text-xl font-bold">
                             EQUIPE
                         </h2>
                     </div>

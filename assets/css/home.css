@@ -2,8 +2,11 @@
 #carousel {
     margin-bottom: 6rem;
 }
-.carousel-inner {
-    height: 30vh;
+
+.carousel-inner img {
+    height: 35vh;
+    width: 100%;
+    object-fit: cover;
 }
 
 #home-page .texto {
@@ -28,7 +31,6 @@
 /*Newsletter*/
 .newsletter {
     text-align: center;
-    color: black;
 }
 
 #home-page form {

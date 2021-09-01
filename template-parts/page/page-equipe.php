@@ -1,33 +1,33 @@
 <?php get_header(); ?>
 
 <main id="equipe-page">
-    <section class="grid grid-cols-1 md:grid-cols-2 justify-items-center p-6 md:px-20 py-8 md:gap-4 text-center">
-        <div class="m-2">
+    <section class="grid grid-cols-1 lg:grid-cols-2 justify-items-center p-6 md:px-20 py-8 md:gap-4 text-center">
+        <div class="px-6 md:px-20 m-2">
             <h1>OBJETIVO</h1>
-            Contribuir com as políticas públicas nacionais e regionais relacionadas à economia do mar.
-            <img class="m-auto w-80" src="<?php echo get_template_directory_uri(); ?>/assets/img/equipe/intro/Objetivo.svg">
+            <p class="mb-4">Contribuir com as políticas públicas nacionais e regionais relacionadas à economia do mar.</p>
+            <img class="m-auto w-80" src="<?php echo get_template_directory_uri(); ?>/assets/img/equipe/intro/objetivo.svg">
         </div>
-        <div class="m-2">
+        <div class="px-6 md:px-20 m-2">
             <h1>MISSÃO</h1>
-            Prover dados e análises acerca dos setores da economia do mar do Brasil, por meio de cooperação com instituições nacionais e internacionais.
-            <img class="m-auto w-80" src="<?php echo get_template_directory_uri(); ?>/assets/img/equipe/intro/Missão.svg"> 
+            <p class="mb-4">Prover dados e análises acerca dos setores da economia do mar do Brasil, por meio de cooperação com instituições nacionais e internacionais.</p>
+            <img class="m-auto w-80" src="<?php echo get_template_directory_uri(); ?>/assets/img/equipe/intro/missao.svg">
         </div>
-        <div class="m-2">
+        <div class="px-6 md:px-20 m-2">
             <h1>VISÃO</h1>
-            Se consolidar como um grupo de pesquisa de referência nos estudos brasileiros sobre economia do mar, contribuindo com a transformação da realidade nacional e promovendo o desenvolvimento sustentável.
-            <img class="m-auto w-80" src="<?php echo get_template_directory_uri(); ?>/assets/img/equipe/intro/Valores.svg">
+            <p class="mb-4">Se consolidar como um grupo de pesquisa de referência nos estudos brasileiros sobre economia do mar, contribuindo com a transformação da realidade nacional e promovendo o desenvolvimento sustentável.</p>
+            <img class="m-auto w-80" src="<?php echo get_template_directory_uri(); ?>/assets/img/equipe/intro/valores.svg">
         </div>
-        <div class="m-2">
+        <div class="px-6 md:px-12 lg:px-20 m-2">
             <h1>VALORES</h1>
-            Sustentabilidade, ética, diversidade, excelência, independência e transparência.
-            <img class="m-auto w-80" src="<?php echo get_template_directory_uri(); ?>/assets/img/equipe/intro/Objetivo.svg">
+            <p class="mb-4">Sustentabilidade, ética, diversidade, excelência, independência e transparência.</p>
+            <img class="m-auto w-80" src="<?php echo get_template_directory_uri(); ?>/assets/img/equipe/intro/visao.svg">
         </div>
     </section>
 
     <section class="text-center p-6 background-reverso">
         <h1 class="font-clara">DIVERSIDADE</h1>
         
-        <div class="grid grid-cols-1 md:grid-cols-2 justify-items-center p-6 md:px-56 py-8 text-center">
+        <div class="grid grid-cols-1 lg:grid-cols-2 justify-items-center p-6 md:px-20 lg:px-56 py-8 text-center">
             <img class="m-auto w-96" src="<?php echo get_template_directory_uri(); ?>/assets/img/equipe/diversidade/diversidade_regional.svg">
             <img class="m-auto w-96" src="<?php echo get_template_directory_uri(); ?>/assets/img/equipe/diversidade/diversidade_formacao.svg">
             <img class="m-auto w-96" src="<?php echo get_template_directory_uri(); ?>/assets/img/equipe/diversidade/diversidade_genero.svg">
@@ -37,12 +37,12 @@
 
     <section class="flex flex-col justify-center text-center">
         <div class="destaque">
-            <img class="w-60 p-4 m-auto" src="<?php echo get_template_directory_uri(); ?>/assets/img/equipe/Thauan Santos.png">
+            <img class="w-60 p-4 m-auto" src="<?php echo get_template_directory_uri(); ?>/assets/img/equipe/thauan_santos.png">
             <p class="font-bold">Thauan Santos</p>
             <span class="italic">Coordenador do GEM</span>
         </div>
 
-        <div class="grid grid-cols-2 md:grid-cols-5 gap-4 px-2 py-12">
+        <div class="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 xl:grid-cols-4 gap-x-4 gap-y-8 px-2 py-12">
             <div>
                 <img class="w-1/2 p-4 m-auto" src="<?php echo get_template_directory_uri(); ?>/assets/img/equipe/Luis Filipe de Souza Porto.png">
                 <p class="font-bold">Filipe Porto</p>
