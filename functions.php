@@ -76,18 +76,19 @@ if ( ! function_exists( 'gem_enqueue_scripts_and_styles' ) ) {
         /**
          * Enqueue fonts.
          */
-        wp_enqueue_style( 'font-ubuntu', 'http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin', [], '', 'all' );
+        wp_enqueue_style( 'font-ubuntu', 'http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin', [ ], '', 'all' );
         /**
          * Enqueue CSS.
          */
-        wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', [], '4.0.0', 'all' );
-        wp_enqueue_style( 'tailwind', 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css', [], '2.0', 'all' );
+        wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', [ ], '4.0.0', 'all' );
+        wp_enqueue_style( 'tailwind', 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css', [ ], '2.0', 'all' );
         wp_enqueue_style( 'main', GEM_DIR_URI . '/assets/css/main.css', [ 'bootstrap', 'tailwind' ] , filemtime( GEM_DIR_PATH . '/assets/css/main.css'), 'all' );
         wp_enqueue_style( 'style', get_stylesheet_uri() );
 
         /**
          * Enqueue Javascript.
          */
+        wp_enqueue_script( 'alpine-js', 'https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js',  [ ], 3.2, false );
         wp_enqueue_script( 'jquery-js', 'https://code.jquery.com/jquery-3.5.1.slim.min.js',  [ ], 3.5, false );
         wp_enqueue_script( 'popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js',  [ 'jquery-js' ], 1.16, false );
         wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js',  [ 'popper', 'jquery-js' ], 4.6, true );
