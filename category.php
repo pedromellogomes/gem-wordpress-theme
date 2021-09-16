@@ -75,7 +75,7 @@
 
                         <!-- Post Thumbnail with link -->
                         <a href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail('post-thumbnail', [ 'class' => 'fit-thumbnail rounded-2xl max-w-sm' ] ); ?>
+                            <?php the_post_thumbnail('post-thumbnail', [ 'class' => 'fit-thumbnail rounded-2xl max-w-sm m-auto' ] ); ?>
                         </a>
                     </div>    
 

@@ -114,31 +114,38 @@
                     </h2>
                 </div>
                 <div class="flex text-center">
-                    <?php
-                        $posts = get_posts( [ 'post_status' => 'publish', 'numberposts' => 5 ] );
-                        if ( !$posts ) :
-                    ?>
-                            <div class="w-full my-20 text-center">
-                                <p>Ainda não há publicações.</p>
-                            </div>
-                    <?php
-                        else :
-                            foreach ( $posts as $post ) :
-                                setup_postdata( $post );
-                    ?>
-                                <div class="h-1/4 px-6 m-2">
-                                    <div class="h-44 w-36 m-2 rounded-md bg-gray-300">
-                                        thumbnail
+                    <?php 
+                    $articles = new WP_Query([ 'post_type' => 'article', 'post_status' => 'publish', 'posts_per_page' => 3 ]);
+                    if ( $articles->have_posts() ) : ?>
+                        <div class="grid grid-col-1 md:grid-cols-2">
+                            <?php while ( $articles->have_posts() ) : $articles->the_post(); ?>
+                                <div class="text-center mx-12 my-6 p-6">
+                                    
+                                    <div class="p-2">
+                                        <!-- Post link -->
+                                        <a href="<?php the_permalink(); ?>" class="font-bold text-xl">
+                                            <?php the_title(); ?>
+                                        </a>
+                                        <!-- Post date -->
+                                        <div class="text-base font-semibold">
+                                            <?php the_date(); ?>
+                                        </div>
                                     </div>
-                                    <a href="<?php the_permalink(); ?>" class="">
-                                        <?php the_title(); ?>
+
+                                    <!-- Post Thumbnail with link -->
+                                    <a href="<?php the_permalink(); ?>">
+                                        <?php the_post_thumbnail('post-thumbnail', [ 'class' => 'fit-thumbnail rounded-2xl max-w-xs m-auto' ] ); ?>
                                     </a>
-                                </div>
-                    <?php
-                            endforeach;
-                        endif;
-                        wp_reset_postdata();
-                    ?>
+                                </div>    
+
+                            <?php endwhile; ?>
+                            <?php wp_reset_postdata(); ?>
+                        </div>
+                    <?php else : ?>
+                        <div class="w-full my-20 text-center">
+                            <p>Ainda não há publicações.</p>
+                        </div>
+                    <?php endif; ?>
                 </div>
             </div>
 
