@@ -76,18 +76,19 @@ if ( ! function_exists( 'gem_enqueue_scripts_and_styles' ) ) {
         /**
          * Enqueue fonts.
          */
-        wp_enqueue_style( 'font-ubuntu', 'http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin', [], '', 'all' );
+        wp_enqueue_style( 'font-ubuntu', 'http://fonts.googleapis.com/css?family=Ubuntu:regular,bold&subset=Latin', [ ], '', 'all' );
         /**
          * Enqueue CSS.
          */
-        wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', [], '4.0.0', 'all' );
-        wp_enqueue_style( 'tailwind', 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css', [], '2.0', 'all' );
+        wp_enqueue_style( 'bootstrap', 'https://maxcdn.bootstrapcdn.com/bootstrap/4.0.0/css/bootstrap.min.css', [ ], '4.0.0', 'all' );
+        wp_enqueue_style( 'tailwind', 'https://unpkg.com/tailwindcss@^2/dist/tailwind.min.css', [ ], '2.0', 'all' );
         wp_enqueue_style( 'main', GEM_DIR_URI . '/assets/css/main.css', [ 'bootstrap', 'tailwind' ] , filemtime( GEM_DIR_PATH . '/assets/css/main.css'), 'all' );
         wp_enqueue_style( 'style', get_stylesheet_uri() );
 
         /**
          * Enqueue Javascript.
          */
+        wp_enqueue_script( 'alpine-js', 'https://unpkg.com/alpinejs@3.2.4/dist/cdn.min.js',  [ ], 3.2, false );
         wp_enqueue_script( 'jquery-js', 'https://code.jquery.com/jquery-3.5.1.slim.min.js',  [ ], 3.5, false );
         wp_enqueue_script( 'popper', 'https://cdn.jsdelivr.net/npm/popper.js@1.16.1/dist/umd/popper.min.js',  [ 'jquery-js' ], 1.16, false );
         wp_enqueue_script( 'bootstrap', 'https://cdn.jsdelivr.net/npm/bootstrap@4.6.0/dist/js/bootstrap.min.js',  [ 'popper', 'jquery-js' ], 4.6, true );
@@ -221,5 +222,160 @@ if ( ! function_exists( 'gem_register_categories' ) ) {
     }
 
     add_action( 'init', 'gem_register_categories' );
+}
+
+
+/**
+ * 
+ */
+if ( ! function_exists( 'gem_add_new_user_fields' ) ) {
+
+    function gem_add_new_user_fields( $operation ) {
+        if ( 'add-new-user' !== $operation ) {
+            // $operation may also be 'add-existing-user'
+            return;
+        }
+    
+        $linkedin = ! empty( $_POST[ 'linkedin' ] ) ? strval( $_POST[ 'linkedin' ] ) : '';
+        $facebook = ! empty( $_POST[ 'facebook' ] ) ? strval( $_POST[ 'facebook' ] ) : '';
+        $instagram = ! empty( $_POST[ 'instagram' ] ) ? strval( $_POST[ 'instagram' ] ) : '';
+    
+        ?>
+        <h3>Redes Sociais</h3>
+    
+        <table class="form-table">
+            <tr>
+                <th>
+                    <label for="linkedin"> Linkedin </label>
+                </th>
+                <td>
+                    <input type="text"
+                       id="linkedin"
+                       name="linkedin"
+                       value="<?php echo esc_attr( $linkedin ); ?>"
+                       class="regular-text"
+                    />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="facebook"> Facebook </label>
+                </th>
+                <td>
+                    <input type="text"
+                       id="facebook"
+                       name="facebook"
+                       value="<?php echo esc_attr( $facebook ); ?>"
+                       class="regular-text"
+                    />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="instagram"> Instagram </label>
+                </th>
+                <td>
+                    <input type="text"
+                       id="instagram"
+                       name="instagram"
+                       value="<?php echo esc_attr( $instagram ); ?>"
+                       class="regular-text"
+                    />
+                </td>
+            </tr>
+        </table>
+        <?php
+    }
+
+    add_action( 'user_new_form', 'gem_add_new_user_fields' );
+}
+
+/**
+ * 
+ */
+if ( ! function_exists( 'gem_show_new_user_fields' ) ) {
+
+    function gem_show_new_user_fields( $user ) {
+        $linkedin = get_the_author_meta( 'linkedin', $user->ID );
+        $facebook = get_the_author_meta( 'facebook', $user->ID );
+        $instagram = get_the_author_meta( 'instagram', $user->ID );
+    
+        ?>
+        <h3>Redes Sociais</h3>
+    
+        <table class="form-table">
+            <tr>
+                <th>
+                    <label for="linkedin"> Linkedin </label>
+                </th>
+                <td>
+                    <input type="text"
+                       id="linkedin"
+                       name="linkedin"
+                       value="<?php echo esc_attr( $linkedin ); ?>"
+                       class="regular-text"
+                    />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="facebook"> Facebook </label>
+                </th>
+                <td>
+                    <input type="text"
+                       id="facebook"
+                       name="facebook"
+                       value="<?php echo esc_attr( $facebook ); ?>"
+                       class="regular-text"
+                    />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="instagram"> Instagram </label>
+                </th>
+                <td>
+                    <input type="text"
+                       id="instagram"
+                       name="instagram"
+                       value="<?php echo esc_attr( $instagram ); ?>"
+                       class="regular-text"
+                    />
+                </td>
+            </tr>
+        </table>
+        <?php
+    }
+
+    add_action( 'edit_user_profile', 'gem_show_new_user_fields' );
+    add_action( 'show_user_profile', 'gem_show_new_user_fields' );
+}
+
+/**
+ * 
+ */
+if ( ! function_exists( 'gem_update_profile_fields' ) ) {
+
+    function gem_update_profile_fields( $user_id ) {
+        if ( ! current_user_can( 'edit_user', $user_id ) ) {
+            return false;
+        }
+    
+        if ( ! empty( $_POST['linkedin'] ) ) {
+            update_user_meta( $user_id, 'linkedin', strval( $_POST['linkedin'] ) );
+        }
+
+        if ( ! empty( $_POST['instagram'] ) ) {
+            update_user_meta( $user_id, 'instagram', strval( $_POST['instagram'] ) );
+        }
+
+        if ( ! empty( $_POST['facebook'] ) ) {
+            update_user_meta( $user_id, 'facebook', strval( $_POST['facebook'] ) );
+        }
+
+    }
+    
+    add_action( 'personal_options_update', 'gem_update_profile_fields' );
+    add_action( 'edit_user_profile_update', 'gem_update_profile_fields' );
 }
 ?>

@@ -1,0 +1,9 @@
+#article #output p img{
+    margin-bottom: 4rem;
+    margin-top: 4rem;
+    transform: scale(1.12);
+}
+
+.assineBtn {
+    background-color: #005578;
+}

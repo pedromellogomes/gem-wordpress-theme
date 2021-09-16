@@ -33,16 +33,12 @@
             <div class="grid grid-col-1 md:grid-cols-3 justify-items-center">
                 <?php while ( $policybriefs->have_posts() ) : $policybriefs->the_post(); ?>
                     <div class="text-center mx-12 my-6 p-6">
-
-                        <!-- Post thumbnail with link -->
-                        <a href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail('post-thumbnail', [ 'class' => 'fit-thumbnail rounded-2xl bg-gray-200' ] ); ?>
-                        </a>
-                        <!-- Post link -->
-                        <div class="p-2">
-                            <a href="<?php the_permalink(); ?>" class="font-semibold text-gray-500">
-                                <?php the_title(); ?>
-                            </a>
+                        <div>
+                            <?php the_post_thumbnail('post-thumbnail', [ 'class' => 'fit-thumbnail rounded-2xl h-60 w-40 m-auto' ] ); ?>
+                        </div>
+                        
+                        <div>
+                            <?php echo pdf_attachment_file( "1", "" ); ?>
                         </div>
                     </div>    
 
@@ -79,7 +75,7 @@
 
                         <!-- Post Thumbnail with link -->
                         <a href="<?php the_permalink(); ?>">
-                            <?php the_post_thumbnail('post-thumbnail', [ 'class' => 'fit-thumbnail rounded-2xl bg-gray-200' ] ); ?>
+                            <?php the_post_thumbnail('post-thumbnail', [ 'class' => 'fit-thumbnail rounded-2xl max-w-sm' ] ); ?>
                         </a>
                     </div>    
 
