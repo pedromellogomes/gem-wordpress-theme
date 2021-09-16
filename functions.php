@@ -223,4 +223,159 @@ if ( ! function_exists( 'gem_register_categories' ) ) {
 
     add_action( 'init', 'gem_register_categories' );
 }
+
+
+/**
+ * 
+ */
+if ( ! function_exists( 'gem_add_new_user_fields' ) ) {
+
+    function gem_add_new_user_fields( $operation ) {
+        if ( 'add-new-user' !== $operation ) {
+            // $operation may also be 'add-existing-user'
+            return;
+        }
+    
+        $linkedin = ! empty( $_POST[ 'linkedin' ] ) ? strval( $_POST[ 'linkedin' ] ) : '';
+        $facebook = ! empty( $_POST[ 'facebook' ] ) ? strval( $_POST[ 'facebook' ] ) : '';
+        $instagram = ! empty( $_POST[ 'instagram' ] ) ? strval( $_POST[ 'instagram' ] ) : '';
+    
+        ?>
+        <h3>Redes Sociais</h3>
+    
+        <table class="form-table">
+            <tr>
+                <th>
+                    <label for="linkedin"> Linkedin </label>
+                </th>
+                <td>
+                    <input type="text"
+                       id="linkedin"
+                       name="linkedin"
+                       value="<?php echo esc_attr( $linkedin ); ?>"
+                       class="regular-text"
+                    />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="facebook"> Facebook </label>
+                </th>
+                <td>
+                    <input type="text"
+                       id="facebook"
+                       name="facebook"
+                       value="<?php echo esc_attr( $facebook ); ?>"
+                       class="regular-text"
+                    />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="instagram"> Instagram </label>
+                </th>
+                <td>
+                    <input type="text"
+                       id="instagram"
+                       name="instagram"
+                       value="<?php echo esc_attr( $instagram ); ?>"
+                       class="regular-text"
+                    />
+                </td>
+            </tr>
+        </table>
+        <?php
+    }
+
+    add_action( 'user_new_form', 'gem_add_new_user_fields' );
+}
+
+/**
+ * 
+ */
+if ( ! function_exists( 'gem_show_new_user_fields' ) ) {
+
+    function gem_show_new_user_fields( $user ) {
+        $linkedin = get_the_author_meta( 'linkedin', $user->ID );
+        $facebook = get_the_author_meta( 'facebook', $user->ID );
+        $instagram = get_the_author_meta( 'instagram', $user->ID );
+    
+        ?>
+        <h3>Redes Sociais</h3>
+    
+        <table class="form-table">
+            <tr>
+                <th>
+                    <label for="linkedin"> Linkedin </label>
+                </th>
+                <td>
+                    <input type="text"
+                       id="linkedin"
+                       name="linkedin"
+                       value="<?php echo esc_attr( $linkedin ); ?>"
+                       class="regular-text"
+                    />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="facebook"> Facebook </label>
+                </th>
+                <td>
+                    <input type="text"
+                       id="facebook"
+                       name="facebook"
+                       value="<?php echo esc_attr( $facebook ); ?>"
+                       class="regular-text"
+                    />
+                </td>
+            </tr>
+            <tr>
+                <th>
+                    <label for="instagram"> Instagram </label>
+                </th>
+                <td>
+                    <input type="text"
+                       id="instagram"
+                       name="instagram"
+                       value="<?php echo esc_attr( $instagram ); ?>"
+                       class="regular-text"
+                    />
+                </td>
+            </tr>
+        </table>
+        <?php
+    }
+
+    add_action( 'edit_user_profile', 'gem_show_new_user_fields' );
+    add_action( 'show_user_profile', 'gem_show_new_user_fields' );
+}
+
+/**
+ * 
+ */
+if ( ! function_exists( 'gem_update_profile_fields' ) ) {
+
+    function gem_update_profile_fields( $user_id ) {
+        if ( ! current_user_can( 'edit_user', $user_id ) ) {
+            return false;
+        }
+    
+        if ( ! empty( $_POST['linkedin'] ) ) {
+            update_user_meta( $user_id, 'linkedin', strval( $_POST['linkedin'] ) );
+        }
+
+        if ( ! empty( $_POST['instagram'] ) ) {
+            update_user_meta( $user_id, 'instagram', strval( $_POST['instagram'] ) );
+        }
+
+        if ( ! empty( $_POST['facebook'] ) ) {
+            update_user_meta( $user_id, 'facebook', strval( $_POST['facebook'] ) );
+        }
+
+    }
+    
+    add_action( 'personal_options_update', 'gem_update_profile_fields' );
+    add_action( 'edit_user_profile_update', 'gem_update_profile_fields' );
+}
 ?>
