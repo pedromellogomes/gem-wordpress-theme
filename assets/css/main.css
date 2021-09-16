@@ -9,6 +9,7 @@
 @import 'fale-conosco.css';
 @import 'category.css';
 @import 'assine.css';
+@import 'article.css';
 
 :root {
     --primary:  #d4d4d4;
