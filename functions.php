@@ -237,8 +237,7 @@ if ( ! function_exists( 'gem_add_new_user_fields' ) ) {
         }
     
         $linkedin = ! empty( $_POST[ 'linkedin' ] ) ? strval( $_POST[ 'linkedin' ] ) : '';
-        $facebook = ! empty( $_POST[ 'facebook' ] ) ? strval( $_POST[ 'facebook' ] ) : '';
-        $instagram = ! empty( $_POST[ 'instagram' ] ) ? strval( $_POST[ 'instagram' ] ) : '';
+        $lattes = ! empty( $_POST[ 'lattes' ] ) ? strval( $_POST[ 'lattes' ] ) : '';
     
         ?>
         <h3>Redes Sociais</h3>
@@ -259,26 +258,13 @@ if ( ! function_exists( 'gem_add_new_user_fields' ) ) {
             </tr>
             <tr>
                 <th>
-                    <label for="facebook"> Facebook </label>
+                    <label for="Lattes"> Currículo Lattes </label>
                 </th>
                 <td>
                     <input type="text"
-                       id="facebook"
-                       name="facebook"
-                       value="<?php echo esc_attr( $facebook ); ?>"
-                       class="regular-text"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    <label for="instagram"> Instagram </label>
-                </th>
-                <td>
-                    <input type="text"
-                       id="instagram"
-                       name="instagram"
-                       value="<?php echo esc_attr( $instagram ); ?>"
+                       id="lattes"
+                       name="lattes"
+                       value="<?php echo esc_attr( $lattes ); ?>"
                        class="regular-text"
                     />
                 </td>
@@ -297,8 +283,7 @@ if ( ! function_exists( 'gem_show_new_user_fields' ) ) {
 
     function gem_show_new_user_fields( $user ) {
         $linkedin = get_the_author_meta( 'linkedin', $user->ID );
-        $facebook = get_the_author_meta( 'facebook', $user->ID );
-        $instagram = get_the_author_meta( 'instagram', $user->ID );
+        $lattes = get_the_author_meta( 'lattes', $user->ID );
     
         ?>
         <h3>Redes Sociais</h3>
@@ -319,26 +304,13 @@ if ( ! function_exists( 'gem_show_new_user_fields' ) ) {
             </tr>
             <tr>
                 <th>
-                    <label for="facebook"> Facebook </label>
+                    <label for="Lattes"> Currículo Lattes </label>
                 </th>
                 <td>
                     <input type="text"
-                       id="facebook"
-                       name="facebook"
-                       value="<?php echo esc_attr( $facebook ); ?>"
-                       class="regular-text"
-                    />
-                </td>
-            </tr>
-            <tr>
-                <th>
-                    <label for="instagram"> Instagram </label>
-                </th>
-                <td>
-                    <input type="text"
-                       id="instagram"
-                       name="instagram"
-                       value="<?php echo esc_attr( $instagram ); ?>"
+                       id="lattes"
+                       name="lattes"
+                       value="<?php echo esc_attr( $lattes ); ?>"
                        class="regular-text"
                     />
                 </td>
@@ -365,12 +337,8 @@ if ( ! function_exists( 'gem_update_profile_fields' ) ) {
             update_user_meta( $user_id, 'linkedin', strval( $_POST['linkedin'] ) );
         }
 
-        if ( ! empty( $_POST['instagram'] ) ) {
-            update_user_meta( $user_id, 'instagram', strval( $_POST['instagram'] ) );
-        }
-
-        if ( ! empty( $_POST['facebook'] ) ) {
-            update_user_meta( $user_id, 'facebook', strval( $_POST['facebook'] ) );
+        if ( ! empty( $_POST['lattes'] ) ) {
+            update_user_meta( $user_id, 'lattes', strval( $_POST['lattes'] ) );
         }
 
     }

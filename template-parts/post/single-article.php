@@ -6,32 +6,6 @@
                 <h1 class="font-bold">
                     <?php the_title(); ?>
                 </h1>
-                <div class="flex flex-col justify-between">
-                    <?php
-                        $linkedin = get_the_author_meta( 'linkedin' );
-                        if ( $linkedin ) :
-                    ?>
-                        <a href="<?php echo $linkedin; ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/linkedin.svg" hight="20px" width="20px"  alt="linkedin link">
-                        </a>
-                    <?php endif; ?>
-                    <?php
-                        $facebook = get_the_author_meta( 'facebook' );
-                        if ( $facebook ) :
-                    ?>
-                        <a href="<?php echo $facebook; ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/facebook.svg" hight="20px" width="20px"  alt="facebook link">
-                        </a>
-                    <?php endif; ?>
-                    <?php
-                        $instagram = get_the_author_meta( 'instagram' );
-                        if ( $instagram ) :
-                    ?>
-                        <a href="<?php echo $instagram; ?>">
-                            <img src="<?php echo get_template_directory_uri(); ?>/assets/icon/instagram.svg" hight="20px" width="20px"  alt="instagram link">
-                        </a>
-                    <?php endif; ?>
-                </div>
             </div>
 
             <div class="text-gray-500">
@@ -39,8 +13,36 @@
 
                 </div>
                 <div>
-                    <div class="font-bold italic">
-                        Escrito por <?php the_author_posts_link(); ?>
+                    <div class="flex font-bold italic">
+                        Escrito por&nbsp;<?php the_author_posts_link(); ?>
+                        
+                        <?php
+                            $linkedin = get_the_author_meta( 'linkedin' );
+                            if ( $linkedin ) :
+                        ?>
+                            <a href="<?php echo $linkedin; ?>">
+                                <img
+                                    src="<?php echo get_template_directory_uri(); ?>/assets/icon/linkedin.svg"
+                                    hight="20px"
+                                    width="20px"
+                                    class="ml-4"
+                                    alt="linkedin link">
+                            </a>
+                        <?php endif; ?>
+                        <?php
+                            $lattes = get_the_author_meta( 'lattes' );
+                            if ( $lattes ) :
+                        ?>
+                            <a href="<?php echo $lattes; ?>">
+                                <img
+                                    src="<?php echo get_template_directory_uri(); ?>/assets/icon/lattes.png"
+                                    hight="20px"
+                                    width="20px"
+                                    class="ml-4"
+                                    alt="lattes link">
+                            </a>
+                        <?php endif; ?>
+                        
                     </div>
                     <p class="text-sm">
                         Publicado em <?php echo get_the_date( 'd/m/Y' ); ?>. Última atualização: <?php echo get_the_modified_date( 'd/m/Y' ); ?>.
@@ -49,7 +51,7 @@
             </div>
         </header>
         
-        <div class="my-8 text-justify">
+        <div id="output" class="my-8 text-justify">
             <?php the_content(); ?>
         </div>
 

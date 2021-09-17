@@ -113,34 +113,44 @@
                         ULTIMAS PUBLICAÇÕES
                     </h2>
                 </div>
-                <div class="flex text-center">
+                <div class="flex justify-around text-center">
                     <?php 
-                    $articles = new WP_Query([ 'post_type' => 'article', 'post_status' => 'publish', 'posts_per_page' => 3 ]);
-                    if ( $articles->have_posts() ) : ?>
-                        <div class="grid grid-col-1 md:grid-cols-2">
-                            <?php while ( $articles->have_posts() ) : $articles->the_post(); ?>
-                                <div class="text-center mx-12 my-6 p-6">
-                                    
-                                    <div class="p-2">
-                                        <!-- Post link -->
+                    $articles = new WP_Query([ 'post_type' => [ 'article', 'policybrief' ], 'post_status' => 'publish', 'posts_per_page' => 3 ]);
+                    if ( $articles->have_posts() ) :
+                        while ( $articles->have_posts() ) :
+                            $articles->the_post(); ?>
+                            <div class="text-center p-6">
+                                
+                                <?php if ( get_post_type( get_the_ID() ) == 'policybrief' ) : ?>
+                                    <div>
+                                        <div>
+                                            <?php the_post_thumbnail('post-thumbnail', [ 'class' => 'fit-thumbnail rounded-2xl h-60 w-40 m-auto' ] ); ?>
+                                        </div>
+
+                                        <div>
+                                            <?php echo pdf_attachment_file( "1", "" ); ?>
+                                        </div>
+                                    </div>
+                                        
+                                <?php else : ?>
+                                    <div>
                                         <a href="<?php the_permalink(); ?>" class="font-bold text-xl">
                                             <?php the_title(); ?>
                                         </a>
-                                        <!-- Post date -->
                                         <div class="text-base font-semibold">
                                             <?php the_date(); ?>
                                         </div>
+                                        <a href="<?php the_permalink(); ?>">
+                                            <?php the_post_thumbnail('post-thumbnail', [ 'class' => 'fit-thumbnail rounded-2xl max-w-xs m-auto' ] ); ?>
+                                        </a>
                                     </div>
+                                    
+                                <?php endif; ?>
+                            </div>    
 
-                                    <!-- Post Thumbnail with link -->
-                                    <a href="<?php the_permalink(); ?>">
-                                        <?php the_post_thumbnail('post-thumbnail', [ 'class' => 'fit-thumbnail rounded-2xl max-w-xs m-auto' ] ); ?>
-                                    </a>
-                                </div>    
-
-                            <?php endwhile; ?>
-                            <?php wp_reset_postdata(); ?>
-                        </div>
+                        <?php endwhile; ?>
+                        <?php wp_reset_postdata(); ?>
+                        
                     <?php else : ?>
                         <div class="w-full my-20 text-center">
                             <p>Ainda não há publicações.</p>

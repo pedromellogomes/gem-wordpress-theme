@@ -1,6 +1,8 @@
 #article #output p img{
     margin-bottom: 4rem;
     margin-top: 4rem;
+    margin-left: auto;
+    margin-right: auto;
     transform: scale(1.12);
 }
 
